@@ -15,27 +15,33 @@
 ## Скриншоты
 
 - **Git:**  
-  ![git](https://github.com/alexsandro007/IPK-WT-P30/raw/students/p30_yarmola/task_00/students/p30_yarmola/task_00/doc/img/git_version.png)
+  ![git](./img/git_version.png)
+
   _Рис. 1 — Проверка версии Git (git --version)_
 
 - **.NET SDK:**  
   ![dotnet](./img/dotnet_version.png)
+  
   _Рис. 2 — Проверка версии .NET SDK (dotnet --version)_
 
 - **Node.js:**  
   ![node](./img/node_version.png)
+  
   _Рис. 3 — Проверка версии Node.js (node --version)_
 
 - **npm:**  
   ![npm](./img/npm_version.png)
+  
   _Рис. 4 — Проверка версии npm (npm --version)_
 
 - **VS Code:**  
   ![VS Code](./img/vscode_about.png)
+  
   _Рис. 5 — Окно "About" в VS Code_
 
 - **SQL Server LocalDB:**  
   ![SQL](./img/sql_version.png)
+  
   _Рис. 6 — Проверка MSSQLLocalDB (sqllocaldb info)_
 
 ## Краткое описание установки
