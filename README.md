@@ -27,8 +27,8 @@
 
 ## Успеваемость
 
-| №  | ФИО                      | Directory name                               | #0  | #1 | #2 | #3 | #4 | #5 | #6 | #7 | Рейтинг |
-|-11-|Сивак Максим Александрович|[students/MaksimSivak/](students/MaksimSivak/)|- ✓- |----|----|--- |----|----|----|----|---------|
+| №  | ФИО                        | Directory name                                 | #0  | #1 | #2 | #3 | #4 | #5 | #6 | #7 | Рейтинг |
+| 11 | Сивак Максим Александрович | [students/MaksimSivak/](students/MaksimSivak/) | ✓   |    |    |    |    |    |    |    |         | 
 
 <!-- Table styles for GitHub Pages/Docs; ignored in GitHub README rendering -->
 <style>
