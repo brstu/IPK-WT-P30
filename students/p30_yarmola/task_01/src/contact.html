@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ЛР01 — Контакты</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Пропустить к контенту</a>
+  <header>
+    <div class="container">
+      <nav aria-label="Главная навигация">
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./list.html">Список</a></li>
+          <li><a href="./item.html">Карточка</a></li>
+          <li><a aria-current="page" href="./contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <h1>Форма обратной связи</h1>
+
+    <form aria-describedby="form-help">
+      <p id="form-help" class="sr-only">Все поля обязательны для заполнения</p>
+
+      <div>
+        <label for="name">Имя</label>
+        <input id="name" name="name" type="text" required minlength="2" maxlength="50" />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required aria-describedby="email-help" />
+        <small id="email-help">Мы не передаем email третьим лицам.</small>
+      </div>
+
+      <div>
+        <label for="topic">Тема</label>
+        <select id="topic" name="topic" required>
+          <option value="">Выберите тему…</option>
+          <option>Вопрос по каталогу</option>
+          <option>Проблема с сайтом</option>
+          <option>Другое</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000"></textarea>
+      </div>
+
+      <div>
+        <input id="consent" name="consent" type="checkbox" required />
+        <label for="consent">Согласен с обработкой персональных данных</label>
+      </div>
+
+      <button type="submit">Отправить</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© 2025 Вариант темы</small>
+    </div>
+  </footer>
+</body>
+</html>
