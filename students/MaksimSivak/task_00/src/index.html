@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Учёт финансов — ЛР1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Учёт финансов</h1>
+    <form id="transaction-form">
+        <input type="text" id="desc" placeholder="Описание" required>
+        <input type="number" id="amount" placeholder="Сумма" required>
+        <select id="category">
+            <option value="Еда">Еда</option>
+            <option value="Транспорт">Транспорт</option>
+            <option value="Развлечения">Развлечения</option>
+            <option value="Другое">Другое</option>
+        </select>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <div>
+        <label for="filter">Фильтр по категории:</label>
+        <select id="filter">
+            <option value="">Все</option>
+            <option value="Еда">Еда</option>
+            <option value="Транспорт">Транспорт</option>
+            <option value="Развлечения">Развлечения</option>
+            <option value="Другое">Другое</option>
+        </select>
+    </div>
+
+    <table id="transactions">
+        <thead>
+            <tr>
+                <th>Описание</th>
+                <th>Сумма</th>
+                <th>Категория</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- транзакции будут подставляться сюда -->
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>

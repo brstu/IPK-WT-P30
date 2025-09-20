@@ -1,0 +1,51 @@
+@page
+@model BudgetModel
+@{
+    ViewData["Title"] = "Управление бюджетом";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Управление бюджетом</h1>
+        <form method="post" asp-page-handler="Logout">
+            <button type="submit" class="btn btn-danger">Выйти</button>
+        </form>
+    </div>
+    
+    <div class="alert alert-info mt-3">
+        <strong>Добро пожаловать!</strong> Эта страница доступна только для авторизованных пользователей.
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Бюджет на месяц</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Общий бюджет:</strong> 50,000 руб.</p>
+                    <p><strong>Потрачено:</strong> 25,000 руб.</p>
+                    <p><strong>Остаток:</strong> 25,000 руб.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Статистика по категориям</h5>
+                </div>
+                <div class="card-body">
+                    <p>Продукты: 10,000 руб. (40%)</p>
+                    <p>Транспорт: 8,000 руб. (32%)</p>
+                    <p>Развлечения: 4,500 руб. (18%)</p>
+                    <p>Прочее: 2,500 руб. (10%)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-3">
+        <a href="/" class="btn btn-secondary">На главную</a>
+    </div>
+</div>

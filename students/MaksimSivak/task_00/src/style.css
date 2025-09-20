@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    margin: 2em;
+}
+h1 {
+    color: #3a3a3a;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+form {
+    background: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0001;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto 2em auto;
+}
+
+form input, form select {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 0.5em 1.5em;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+form button:hover {
+    background: #388e3c;
+}
+
+div {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+table {
+    background: #fff;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 2px 8px #0001;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+th, td {
+    border: 1px solid #ececec;
+    padding: 0.7em 1em;
+    text-align: left;
+}
+
+th {
+    background: #f0f0f0;
+    color: #222;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #fafafa;
+}
+
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    th, td {
+        padding: 0.5em;
+    }
+    tr {
+        margin-bottom: 1em;
+        box-shadow: 0 1px 4px #0001;
+    }
+    th {
+        background: #e0e0e0;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #ececec;
+    }
+    table {
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
