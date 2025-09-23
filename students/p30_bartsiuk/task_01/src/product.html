@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Умный тостер 2.0 — Гик-маркет 2.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="Главное меню">
+      <a href="index.html" class="logo" tabindex="1">
+        <img src="img/logo.jpg" alt="Логотип Гик-маркет 2.0" width="28" height="28" style="vertical-align:middle;margin-right:6px;">
+        Гик-маркет 2.0
+      </a>
+      <ul>
+        <li><a href="index.html" tabindex="2">Главная</a></li>
+        <li><a href="catalog.html" tabindex="3">Каталог</a></li>
+        <li><a href="product.html?id=1" tabindex="4" aria-current="page">Товар</a></li>
+        <li><a href="contact.html" tabindex="5">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <article>
+      <h1>Умный тостер 2.0</h1>
+      <section aria-labelledby="gallery-title">
+        <h2 id="gallery-title" class="visually-hidden">Галерея товара</h2>
+        <div class="gallery">
+          <img src="img/toaster1.jpg" alt="Умный тостер 2.0 — вид спереди" width="180" height="160">
+          <img src="img/toaster2.jpg" alt="Умный тостер 2.0 — вид сбоку с OLED-дисплеем" width="180" height="160">
+          <img src="img/toaster3.jpg" alt="Умный тостер 2.0 с тостами внутри" width="180" height="160">
+        </div>
+      </section>
+      <div class="product-info">
+        <section aria-labelledby="features-title">
+          <h2 id="features-title">Характеристики</h2>
+          <table class="specs-table">
+            <tbody>
+              <tr><th scope="row">Мощность</th><td>1200 Вт</td></tr>
+              <tr><th scope="row">Управление</th><td>Мобильное приложение, кнопки, Алиса</td></tr>
+              <tr><th scope="row">Дисплей</th><td>OLED 2"</td></tr>
+              <tr><th scope="row">Wi-Fi</th><td>Да (Wi-Fi 6)</td></tr>
+              <tr><th scope="row">Гарантия</th><td>2 года</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section aria-labelledby="compatible-title">
+          <h2 id="compatible-title">Совместимо с</h2>
+          <ul>
+            <li>Яндекс.Алиса</li>
+            <li>SmartCube</li>
+            <li>Google Home</li>
+          </ul>
+        </section>
+
+        <div class="price-section">
+          <div class="price">330 BY</div>
+          <button class="button primary" tabindex="6">Добавить в корзину</button>
+        </div>
+      </div>
+    </article>
+
+    <a href="catalog.html" class="button secondary" tabindex="7"> Назад в каталог</a>
+         
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Гик-маркет 2.0</p>
+  </footer>
+</body>
+</html>
