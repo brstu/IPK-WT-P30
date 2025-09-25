@@ -29,8 +29,8 @@
 
 | №  | ФИО | Directory name | #0 | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11 | #12 | #13 | #14 | #15 | #16 | Рейтинг |
 |----|-----|-----------------|----|----|----|----|----|----|----|----|----|----|-----|-----|-----|-----|-----|-----|-----|---------|
-| 1  |     |                 |    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |     |         |
-| 99 | Тестов Тест Тестович | [students/your_id](./students/your_id/) | ✓  |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |     |         |
+| 1 |Бортюк Ирина Анатольевна | [students/p30_bartsiuk](./students/p30_bartsiuk/) | ✓  | ✓  |    |    |    |    |    |    |    |    |     |     |     |     |     |     |     |         |
+|99|Тестов Тест Тестович | [students/your_id](./students/your_id/) | ✓  |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |     |         |
 
 <!-- Table styles for GitHub Pages/Docs; ignored in GitHub README rendering -->
 <style>
@@ -38,10 +38,10 @@ table {
   border-collapse: collapse;
 }
 table th, table td {
-  border: 1px solid #d0d7de;
+  border: 1px solid;
   padding: 6px 8px;
 }
 table thead th {
-  background-color: #f6f8fa;
+  background-color:;
 }
 </style>
