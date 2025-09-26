@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>catlover — профиль</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav aria-label="Главная навигация">
+      <a href="index.html" class="logo">
+        <img src="Лого.png" alt="Логотип КотоМемы" width="70" height="70">
+        КотоМемы
+      </a>
+      <ul>
+        <li><a href="index.html">Лента</a></li>
+        <li><a href="profiles.html">Профили</a></li>
+      </ul>
+    </nav>
+    <h1>Профиль catlover</h1>
+  </header>
+  <main>
+    <section aria-labelledby="about-catlover">
+      <h2 id="about-catlover">О себе: catlover</h2>
+      <img src="avatar-catlover.jpg" alt="Аватар пользователя catlover" />
+      <p>Люблю котов и смешные мемы!</p>
+    </section>
+    <section aria-labelledby="posts-catlover">
+      <h2 id="posts-catlover">Посты пользователя catlover</h2>
+      <article tabindex="0">
+        <h3>Котик </h3>
+        <img src="кот1.jpg" alt="Котик в смешной позе" />
+        <p>Мяу! Когда увидел корм...</p>
+      </article>
+    </section>
+    <section aria-labelledby="form-catlover">
+      <h2 id="form-catlover">Новый пост</h2>
+      <form>
+        <label for="post-title">Заголовок поста</label>
+        <input type="text" id="post-title" name="title" required />
+
+        <label for="post-image">Фото кота</label>
+        <input type="file" id="post-image" name="image" accept="image/*" required />
+
+        <label for="post-text">Текст</label>
+        <textarea id="post-text" name="text" required aria-describedby="text-help"></textarea>
+        <span id="text-help">Добавьте смешной комментарий!</span>
+
+        <button type="submit">Опубликовать</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 КотоМемы</p>
+  </footer>
+</body>
+</html>

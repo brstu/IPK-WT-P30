@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>КотоМемы — Лента</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Базовые стили */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    
+    header {
+      background-color: #ff9800;
+      color: white;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    
+    .logo img {
+      margin-right: 10px;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav ul li {
+      margin-left: 1.5rem;
+    }
+    
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+    
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    
+    article {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    article h3 {
+      margin-bottom: 1rem;
+      color: #ff9800;
+    }
+    
+    article img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    
+    article footer {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    article footer a {
+      color: #ff9800;
+      text-decoration: none;
+    }
+    
+    /* Стили для кнопок лайков */
+    .like-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #666;
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+      transition: color 0.3s;
+    }
+    
+    .like-btn:hover {
+      color: #ff9800;
+    }
+    
+    .like-btn.liked {
+      color: #e53935;
+    }
+    
+    .like-btn .heart {
+      margin-right: 5px;
+    }
+    
+    /* Стили для комментариев */
+    .comments-section {
+      margin-top: 1.5rem;
+      border-top: 1px solid #eee;
+      padding-top: 1rem;
+    }
+    
+    .comments-list {
+      margin-bottom: 1rem;
+    }
+    
+    .comment {
+      padding: 0.75rem;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    
+    .comment-author {
+      font-weight: bold;
+      color: #ff9800;
+    }
+    
+    .comment-form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .comment-input {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      resize: vertical;
+      min-height: 80px;
+    }
+    
+    .comment-submit {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      align-self: flex-end;
+      transition: background-color 0.3s;
+    }
+    
+    .comment-submit:hover {
+      background-color: #f57c00;
+    }
+    
+    .interaction-bar {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+    
+    /* Адаптивность */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 1rem;
+      }
+      
+      nav ul li {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Главная навигация">
+      <a href="index.html" class="logo">
+        <img src="Лого.png" alt="Логотип КотоМемы" width="70" height="70">
+        КотоМемы
+      </a>
+      <ul>
+        <li><a href="index.html">Лента</a></li>
+        <li><a href="profiles.html">Профили</a></li>
+      </ul>
+    </nav>
+    <h1>Лента кото-мемов</h1>
+  </header>
+  <main>
+    <section aria-labelledby="feed-heading">
+      <h2 id="feed-heading" style="display:none;">Лента кото-мемов</h2>
+      <article tabindex="0">
+        <h3>Котик №1</h3>
+        <img src="кот1.jpg" alt="Котик в смешной позе" />
+        <p>Мяу! Когда увидел корм...</p>
+        
+        <div class="interaction-bar">
+          <button class="like-btn" data-post-id="1">
+            <span class="heart">❤️</span>
+            <span class="like-count">0</span>
+          </button>
+        </div>
+        
+        <div class="comments-section">
+          <div class="comments-list" data-post-id="1">
+            <!-- Комментарии будут добавляться сюда -->
+          </div>
+          <form class="comment-form" data-post-id="1">
+            <textarea class="comment-input" placeholder="Добавьте комментарий..." required></textarea>
+            <button type="submit" class="comment-submit">Отправить</button>
+          </form>
+        </div>
+        
+        <footer>Автор: <a href="profile-catlover.html">catlover</a></footer>
+      </article>
+      
+      <article tabindex="0">
+        <h3>Котик №2</h3>
+        <img src="кот2.jpg" alt="Котик с большими глазами" />
+        <p>Когда услышал открывающуюся дверь!</p>
+        
+        <div class="interaction-bar">
+          <button class="like-btn" data-post-id="2">
+            <span class="heart">❤️</span>
+            <span class="like-count">0</span>
+          </button>
+        </div>
+        
+        <div class="comments-section">
+          <div class="comments-list" data-post-id="2">
+            <!-- Комментарии будут добавляться сюда -->
+          </div>
+          <form class="comment-form" data-post-id="2">
+            <textarea class="comment-input" placeholder="Добавьте комментарий..." required></textarea>
+            <button type="submit" class="comment-submit">Отправить</button>
+          </form>
+        </div>
+        
+        <footer>Автор: <a href="profile-catfan.html">catfan</a></footer>
+      </article>
+      <!-- Добавьте ещё посты по желанию -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 КотоМемы</p>
+  </footer>
+
+  <script>
+    // Функционал лайков
+    document.querySelectorAll('.like-btn').forEach(button => {
+      // Загружаем состояние лайков из localStorage
+      const postId = button.getAttribute('data-post-id');
+      const liked = localStorage.getItem(`post-${postId}-liked`) === 'true';
+      const likeCount = parseInt(localStorage.getItem(`post-${postId}-likes`)) || 0;
+      
+      // Обновляем отображение
+      const likeCountElement = button.querySelector('.like-count');
+      likeCountElement.textContent = likeCount;
+      
+      if (liked) {
+        button.classList.add('liked');
+      }
+      
+      // Обработчик клика
+      button.addEventListener('click', () => {
+        const currentLiked = button.classList.contains('liked');
+        const currentCount = parseInt(likeCountElement.textContent);
+        
+        if (currentLiked) {
+          // Убираем лайк
+          button.classList.remove('liked');
+          likeCountElement.textContent = currentCount - 1;
+          localStorage.setItem(`post-${postId}-liked`, 'false');
+          localStorage.setItem(`post-${postId}-likes`, currentCount - 1);
+        } else {
+          // Ставим лайк
+          button.classList.add('liked');
+          likeCountElement.textContent = currentCount + 1;
+          localStorage.setItem(`post-${postId}-liked`, 'true');
+          localStorage.setItem(`post-${postId}-likes`, currentCount + 1);
+        }
+      });
+    });
+    
+    // Функционал комментариев
+    document.querySelectorAll('.comment-form').forEach(form => {
+      const postId = form.getAttribute('data-post-id');
+      const commentsList = document.querySelector(`.comments-list[data-post-id="${postId}"]`);
+      
+      // Загружаем комментарии из localStorage
+      const savedComments = JSON.parse(localStorage.getItem(`post-${postId}-comments`)) || [];
+      savedComments.forEach(comment => {
+        addCommentToDOM(commentsList, comment.author, comment.text);
+      });
+      
+      // Обработчик отправки формы
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const textarea = form.querySelector('.comment-input');
+        const commentText = textarea.value.trim();
+        
+        if (commentText) {
+          // Добавляем комментарий
+          const author = "Анонимный пользователь"; // В реальном приложении здесь был бы текущий пользователь
+          addCommentToDOM(commentsList, author, commentText);
+          
+          // Сохраняем в localStorage
+          const savedComments = JSON.parse(localStorage.getItem(`post-${postId}-comments`)) || [];
+          savedComments.push({ author, text: commentText });
+          localStorage.setItem(`post-${postId}-comments`, JSON.stringify(savedComments));
+          
+          // Очищаем поле ввода
+          textarea.value = '';
+        }
+      });
+    });
+    
+    // Функция для добавления комментария в DOM
+    function addCommentToDOM(commentsList, author, text) {
+      const commentDiv = document.createElement('div');
+      commentDiv.className = 'comment';
+      commentDiv.innerHTML = `
+        <div class="comment-author">${author}</div>
+        <div class="comment-text">${text}</div>
+      `;
+      commentsList.appendChild(commentDiv);
+    }
+  </script>
+</body>
+</html>
