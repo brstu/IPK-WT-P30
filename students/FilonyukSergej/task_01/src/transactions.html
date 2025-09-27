@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Транзакции — Где мои деньги?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="Главное меню">
+      <a href="index.html" class="logo" tabindex="1">
+<<<<<<< HEAD
+        <img src="D:\IT\icons8-наличные-100.png" alt="Логотип Где мои деньги?" width="70" height="70">
+=======
+        <img src="img/icons8-наличные-100.png" alt="Логотип Где мои деньги?" width="70" height="70">
+>>>>>>> 424105ce467edb3f3c566c4b7a00f5eba4982611
+        Где мои деньги?
+      </a>
+      <ul>
+        <li><a href="index.html" tabindex="2">Главная</a></li>
+        <li><a href="transactions.html" tabindex="3" aria-current="page">Транзакции</a></li>
+        <li><a href="transaction.html?id=1" tabindex="4">Карточка</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Список транзакций</h1>
+    <form class="sort-form" aria-label="Сортировка списка">
+      <label for="sort" class="visually-hidden">Сортировать по:</label>
+      <select id="sort" name="sort" tabindex="5">
+        <option value="date">Дате</option>
+        <option value="amount">Сумме</option>
+        <option value="category">Категории</option>
+      </select>
+      <button type="submit" tabindex="6">Сортировать</button>
+    </form>
+    <table class="transactions-table">
+      <caption>Таблица транзакций</caption>
+      <thead>
+        <tr>
+          <th scope="col">Дата</th>
+          <th scope="col">Категория</th>
+          <th scope="col">Описание</th>
+          <th scope="col">Сумма (Br)</th>
+          <th scope="col">Детали</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025-09-15</td>
+          <td>Коммунальные</td>
+          <td>Оплата ЖКХ (Брестэнерго)</td>
+          <td>-120,50</td>
+          <td><a href="transaction.html?id=1" tabindex="7">Подробнее</a></td>
+        </tr>
+        <tr>
+          <td>2025-09-13</td>
+          <td>Продукты</td>
+          <td>Евроопт (ул. Московская)</td>
+          <td>-48,99</td>
+          <td><a href="transaction.html?id=2" tabindex="8">Подробнее</a></td>
+        </tr>
+        <tr>
+          <td>2025-09-10</td>
+          <td>Доход</td>
+          <td>Зарплата (ОАО «Брестгазоаппарат»)</td>
+          <td>+1 200,00</td>
+          <td><a href="transaction.html?id=3" tabindex="9">Подробнее</a></td>
+        </tr>
+        <tr>
+          <td>2025-09-07</td>
+          <td>Транспорт</td>
+          <td>Проезд на автобусе</td>
+          <td>-2,50</td>
+          <td><a href="transaction.html?id=4" tabindex="10">Подробнее</a></td>
+        </tr>
+        <tr>
+          <td>2025-09-05</td>
+          <td>Связь</td>
+          <td>МТС пополнение</td>
+          <td>-15,00</td>
+          <td><a href="transaction.html?id=5" tabindex="11">Подробнее</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <p>&copy; 2025 Где мои деньги? — Брест</p>
+  </footer>
+</body>
+</html>
