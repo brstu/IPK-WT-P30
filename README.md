@@ -33,7 +33,8 @@
 | 2  |  Катя Овечкина   | [dir](./students/kateSaharok) | ✓   | ✓   |  ✓  |  ✓  |   |   |  |     |    |    |     |     |     |     |     |     |     |         |
 | 3  |  Ирина Бортюк   | [dir](./students/IrinaBartsiuk) | ✓   | ✓   |  ✓  |   ✓   |   |   |  |     |    |    |     |     |     |     |     |     |     |         |
 | 4  |  Филонюк Сергей   | [dir](./students/FilonyukSergei/) | ✓   | ✓   |  ✓  |  ✓  |  ✓  | ✓   |  ✓  |  ✓   |    |    |     |     |     |     |     |     |     |         |
-| 4  |  Станислав Шульган   | [dir](./students/ShulhanStanislav/) | ✓   | ✓   |  ✓  |  ✓  |  ✓  | ✓   |  ✓  |  ✓   |    |    |     |     |     |     |     |     |     |         |
+| 5  |  Станислав Шульган   | [dir](./students/ShulhanStanislav/) | ✓   | ✓   |  ✓  |  ✓  |  ✓  | ✓   |  ✓  |  ✓   |    |    |     |     |     |     |     |     |     |         |
+| 6  |  Сергей Терентьев   | [dir](./students/TerentyevSergey/) | ✓   |    |    |    |    |    |    |     |    |    |     |     |     |     |     |     |     |         |
 | 99 | Тестов Тест Тестович | [students/your_id](./students/your_id/) | ✓  |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |     |         |
 
 <!-- Table styles for GitHub Pages/Docs; ignored in GitHub README rendering -->
