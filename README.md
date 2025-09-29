@@ -1,4 +1,4 @@
-
+<img width="279" height="92" alt="изображение" src="https://github.com/user-attachments/assets/fb4d1f45-658b-4cf0-8952-29f351f1875c" />
 # Веб‑технологии (ИПК) — лабораторные работы
 
 [![Lint](https://github.com/brstu/IPK-WT-P30/actions/workflows/lint.yml/badge.svg)](https://github.com/brstu/IPK-WT-P30/actions/workflows/lint.yml)
@@ -34,6 +34,7 @@
 | 3  |  Ирина Бортюк   | [dir](./students/IrinaBartsiuk) | ✓   | ✓   |  ✓  |   ✓   |   |   |  |     |    |    |     |     |     |     |     |     |     |         |
 | 4  |  Филонюк Сергей   | [dir](./students/FilonyukSergei/) | ✓   | ✓   |  ✓  |  ✓  |  ✓  | ✓   |  ✓  |  ✓   |    |    |     |     |     |     |     |     |     |         |
 | 4  |  Станислав Шульган   | [dir](./students/ShulhanStanislav/) | ✓   | ✓   |  ✓  |  ✓  |  ✓  | ✓   |  ✓  |  ✓   |    |    |     |     |     |     |     |     |     |         |
+| 12 | Терентьев Сергей | [dir](./students/TerentyevSergey) | ✓ |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |     |         |
 | 99 | Тестов Тест Тестович | [students/your_id](./students/your_id/) | ✓  |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |     |         |
 
 <!-- Table styles for GitHub Pages/Docs; ignored in GitHub README rendering -->
