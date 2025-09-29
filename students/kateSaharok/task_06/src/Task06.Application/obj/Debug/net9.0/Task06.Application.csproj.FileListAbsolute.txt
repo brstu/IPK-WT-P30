@@ -1,0 +1,16 @@
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\bin\Debug\net9.0\Task06.Application.deps.json
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\bin\Debug\net9.0\Task06.Application.dll
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\bin\Debug\net9.0\Task06.Application.pdb
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\bin\Debug\net9.0\Task06.Core.dll
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\bin\Debug\net9.0\Task06.Core.pdb
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\Task06.Application.csproj.AssemblyReference.cache
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\Task06.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\Task06.Application.AssemblyInfoInputs.cache
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\Task06.Application.AssemblyInfo.cs
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\Task06.Application.csproj.CoreCompileInputs.cache
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\Task06.Application.sourcelink.json
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\Task06.A.C226CBA6.Up2Date
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\Task06.Application.dll
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\refint\Task06.Application.dll
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\Task06.Application.pdb
+C:\IPK-WT-P30\students\kateSaharok\task_06\src\Task06.Application\obj\Debug\net9.0\ref\Task06.Application.dll

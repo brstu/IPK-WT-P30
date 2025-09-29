@@ -1,0 +1,16 @@
+@page
+@model Task04.Web.Pages.IndexModel
+@{
+    ViewData["Title"] = "Главная страница";
+}
+
+<div class="container">
+    <h1>Добро пожаловать!</h1>
+    <p>Это главная страница приложения.</p>
+    
+    <div class="list-group">
+        <a href="/Items" class="list-group-item list-group-item-action">Список элементов</a>
+        <a href="/Login" class="list-group-item list-group-item-action">Вход в систему</a>
+        <a href="/ModelBinding" class="list-group-item list-group-item-action">Привязка модели</a>
+    </div>
+</div>

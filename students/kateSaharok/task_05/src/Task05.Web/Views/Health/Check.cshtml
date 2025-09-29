@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Health Check";
+}
+
+<h1>Health Check</h1>
+
+@if (User.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
+{
+    <div class="alert alert-success">
+        <p>Система работает нормально.</p>
+        <p>Время сервера: <strong>@DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss")</strong></p>
+        <p>Вы вошли как администратор: <strong>@User.Identity.Name</strong></p>
+    </div>
+    
+    <div class="mt-4">
+        <h3>Статус системы:</h3>
+        <ul>
+            <li>✅ База данных: подключена</li>
+            <li>✅ Аутентификация: работает</li>
+            <li>✅ Авторизация: активна</li>
+            <li>✅ Время сервера: синхронизировано</li>
+        </ul>
+    </div>
+    
+    <div class="mt-4">
+        <a href="/" class="btn btn-secondary">На главную</a>
+        <a asp-controller="Files" asp-action="Index" class="btn btn-primary">Загрузка файлов</a>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">
+        <h3>Доступ запрещен!</h3>
+        <p>У вас нет прав для доступа к этой странице.</p>
+        <p>Требуется роль администратора.</p>
+        <a href="/" class="btn btn-primary">На главную</a>
+    </div>
+}

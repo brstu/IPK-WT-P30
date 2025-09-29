@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Загрузка файлов";
+}
+
+<h1>Загрузка файлов</h1>
+
+@if (User.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
+{
+    <div class="alert alert-success">
+        <p>Этот раздел доступен только для администраторов.</p>
+        <p>Вы вошли как администратор: <strong>@User.Identity.Name</strong></p>
+    </div>
+    
+    <div class="mt-4">
+        <h3>Форма загрузки файла</h3>
+        <form method="post" enctype="multipart/form-data" asp-action="Upload">
+            <div class="form-group">
+                <label for="file">Выберите файл:</label>
+                <input type="file" name="file" class="form-control" id="file" />
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Загрузить файл</button>
+        </form>
+        
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-info mt-3">
+                @ViewBag.Message
+            </div>
+        }
+    </div>
+    
+    <div class="mt-4">
+        <a href="/" class="btn btn-secondary">На главную</a>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">
+        <h3>Доступ запрещен!</h3>
+        <p>У вас нет прав для доступа к этой странице.</p>
+        <p>Требуется роль администратора.</p>
+        <a href="/" class="btn btn-primary">На главную</a>
+        
+        @if (User.Identity?.IsAuthenticated == false)
+        {
+            <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-success">Войти</a>
+        }
+    </div>
+}
