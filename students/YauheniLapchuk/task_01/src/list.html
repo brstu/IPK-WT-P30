@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ЛР01 — Список</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Пропустить к контенту</a>
+  <header>
+    <div class="container">
+      <nav aria-label="Главная навигация">
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a aria-current="page" href="./list.html">Список</a></li>
+          <li><a href="./item.html">Карточка</a></li>
+          <li><a href="./contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <h1>Список сущностей</h1>
+
+    <section aria-labelledby="tbl-caption">
+      <h2 id="tbl-caption">Табличный вид</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Название</th>
+            <th scope="col">Статус</th>
+            <th scope="col">Дата</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a href="./item.html">Пример элемента</a></td>
+            <td>Активно</td>
+            <td>2025‑09‑16</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="./item.html">Второй элемент</a></td>
+            <td>Черновик</td>
+            <td>2025‑09‑10</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="grid cols-3" aria-label="Карточки">
+      <article class="card">
+        <h2>Элемент A</h2>
+        <p>Краткое описание элемента. <a href="./item.html">Подробнее</a></p>
+      </article>
+      <article class="card">
+        <h2>Элемент B</h2>
+        <p>Краткое описание элемента. <a href="./item.html">Подробнее</a></p>
+      </article>
+      <article class="card">
+        <h2>Элемент C</h2>
+        <p>Краткое описание элемента. <a href="./item.html">Подробнее</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© 2025 Вариант темы</small>
+    </div>
+  </footer>
+</body>
+</html>

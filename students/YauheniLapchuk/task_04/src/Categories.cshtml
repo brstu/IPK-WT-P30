@@ -1,0 +1,25 @@
+@page
+@model CategoriesModel
+@{
+    ViewData["Title"] = "Категории расходов";
+}
+
+<div class="container mt-5">
+    <h1>Категории расходов</h1>
+    
+    <div class="row mt-4">
+        @foreach (var category in Model.Categories)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@category</h5>
+                        <p class="card-text">Расходы в категории: 0 руб.</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    
+    <a href="/" class="btn btn-secondary mt-3">На главную</a>
+</div>

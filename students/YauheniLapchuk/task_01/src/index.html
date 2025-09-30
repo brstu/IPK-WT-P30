@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Где мои деньги? — Дашборд</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="Главное меню">
+      <a href="index.html" class="logo" tabindex="1">
+        <img src="img/icons8-наличные-100.png" alt="Логотип Где мои деньги?" width="70" height="70">
+
+        Где мои деньги?
+      </a>
+      <ul>
+        <li><a href="index.html" tabindex="2" aria-current="page">Главная</a></li>
+        <li><a href="transactions.html" tabindex="3">Транзакции</a></li>
+        <li><a href="transaction.html?id=1" tabindex="4">Карточка</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="balance-heading">
+      <h1 id="balance-heading">Сводка по счету</h1>
+      <div class="balance-card">
+        <h2>Текущий баланс</h2>
+        <output aria-live="polite" class="balance" tabindex="5">3 215,80 Br</output>
+        <p class="balance-location">г. Брест, Беларусь</p>
+      </div>
+      <figure aria-labelledby="diagram-title">
+        <figcaption id="diagram-title">Диаграмма расходов за сентябрь</figcaption>
+        <svg width="220" height="220" aria-label="Диаграмма расходов">
+          <circle cx="110" cy="110" r="100" fill="#ececec" />
+          <path d="M110,110 L110,10 A100,100 0 0,1 210,110 Z" fill="#43a047"/>
+          <path d="M110,110 L210,110 A100,100 0 1,1 110,10 Z" fill="#ffa726"/>
+          <text x="110" y="120" text-anchor="middle" font-size="20" fill="#222">Плейсхолдер</text>
+        </svg>
+      </figure>
+    </section>
+    <section>
+      <h2>Последние транзакции</h2>
+      <ul class="recent-transactions">
+        <li><a href="transaction.html?id=1" tabindex="6">Оплата коммунальных услуг — 120,50 Br</a></li>
+        <li><a href="transaction.html?id=2" tabindex="7">Покупка: Евроопт — 48,99 Br</a></li>
+        <li><a href="transaction.html?id=3" tabindex="8">Зарплата — +1 200,00 Br</a></li>
+      </ul>
+      <a href="transactions.html" class="button" tabindex="9">Все транзакции</a>
+    </section>
+    <aside>
+      <h2>Совет недели</h2>
+      <p>Проверяйте расходы на коммунальные услуги на сайте <a href="https://brestgkh.by" target="_blank" rel="noopener" style="color:#00796b;">brestgkh.by</a> и оплачивайте их вовремя для экономии!</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Где мои деньги? — Брест</p>
+  </footer>
+</body>
+</html>
