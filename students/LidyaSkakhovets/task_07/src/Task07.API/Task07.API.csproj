@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Task07.Application\Task07.Application.csproj" />
+    <ProjectReference Include="..\Task07.Core\Task07.Core.csproj" />
+    <ProjectReference Include="..\Task07.Infrastructure\Task07.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
