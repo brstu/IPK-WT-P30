@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маркетплейс гаджетов - Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация в маркетплейсе</h1>
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="username">Имя пользователя *</label>
+                <input type="text" id="username" name="username" placeholder="username123" required aria-describedby="username-error">
+                <div id="username-error" class="error-message" aria-live="polite"></div>
+                <div class="field-requirements">
+                    Требования: 3-20 символов, латиница/цифры/подчёркивание, нельзя начинать/заканчивать на "_"
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required aria-describedby="email-error">
+                <div id="email-error" class="error-message" aria-live="polite"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль *</label>
+                <input type="password" id="password" name="password" required aria-describedby="password-error">
+                <div id="password-error" class="error-message" aria-live="polite"></div>
+                <div class="field-requirements">
+                    Требования: 10-64 символов, минимум 1 заглавная, 1 строчная, 1 цифра, 1 спецсимвол (-_.!@#;), без пробелов
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+375 29 XXX-XX-XX" required aria-describedby="phone-error">
+                <div id="phone-error" class="error-message" aria-live="polite"></div>
+                <div class="field-requirements">
+                    Формат: +375 (29/25/33/44) XXX-XX-XX
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Зарегистрироваться</button>
+        </form>
+    </div>
+
+    <script type="module" src="./main.ts"></script>
+</body>
+</html>

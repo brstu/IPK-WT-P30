@@ -1,0 +1,48 @@
+@model ElectronicStore.Models.Product
+@{
+    ViewData["Title"] = $"Детали - {Model.Name}";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="@Url.Action("List", "Home")">Все товары</a></li>
+                    <li class="breadcrumb-item active">@Model.Name</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h1>@Model.Name</h1>
+            <p class="lead">@Model.Description</p>
+            
+            <div class="mb-3">
+                <span class="badge bg-primary">@Model.Category</span>
+                <span class="badge bg-success">В наличии: @Model.Stock шт.</span>
+            </div>
+
+            <h3 class="text-primary">@Model.Price.ToString("C")</h3>
+
+            <div class="mt-4">
+                <h4>Характеристики:</h4>
+                <ul>
+                    <li>Категория: @Model.Category</li>
+                    <li>Цена: @Model.Price.ToString("C")</li>
+                    <li>Наличие: @Model.Stock шт.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <a href="@Url.Action("List", "Home")" class="btn btn-secondary">Назад к списку</a>
+            <a href="@Url.Action("Index", "Home")" class="btn btn-outline-primary">На главную</a>
+        </div>
+    </div>
+</div>
