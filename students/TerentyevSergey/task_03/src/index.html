@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР03 — Таблица с API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Список постов</h1>
+        
+        <div id="status">Загрузка...</div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>User ID</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Данные будут здесь -->
+            </tbody>
+        </table>
+        
+        <div class="pager">
+            <button id="prev" disabled>Назад</button>
+            <span id="page-info">Стр. 1/1</span>
+            <button id="next" disabled>Вперёд</button>
+            <button id="clear-cache">Очистить кэш</button>
+        </div>
+    </div>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>

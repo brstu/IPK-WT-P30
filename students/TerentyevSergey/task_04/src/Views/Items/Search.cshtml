@@ -1,0 +1,54 @@
+@model List<Task04.Web.Models.Item>
+@{
+    ViewData["Title"] = "Поиск товаров";
+}
+
+<h2>Поиск товаров</h2>
+
+<form method="get" class="mb-4">
+    <div class="row">
+        <div class="col-md-4">
+            <input type="text" name="name" value="@ViewBag.SearchName" class="form-control" placeholder="Название товара" />
+        </div>
+        <div class="col-md-4">
+            <input type="number" name="minPrice" value="@ViewBag.SearchMinPrice" class="form-control" placeholder="Минимальная цена" step="0.01" />
+        </div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-primary">Искать</button>
+        </div>
+    </div>
+</form>
+
+@if (Model.Any())
+{
+    <h4>Результаты поиска (@Model.Count)</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        Товары не найдены. Попробуйте изменить критерии поиска.
+    </div>
+}
+
+<a href="@Url.Action("Index")" class="btn btn-secondary">Назад к списку</a>
