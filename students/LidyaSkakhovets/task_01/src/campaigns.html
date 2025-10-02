@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кампании - Центр рассылок «Не спам, а ценность»</title>
+    <meta name="description" content="Управление email-кампаниями, создание и отслеживание рассылок">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="Основная навигация">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <h1>«Не спам, а ценность»</h1>
+                </a>
+                <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="campaigns.html" aria-current="page">Кампании</a></li>
+                    <li><a href="analytics.html">Аналитика</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title">Мои кампании</h1>
+                <button class="btn btn-primary" id="create-campaign">Создать кампанию</button>
+            </div>
+        </section>
+
+        <section class="campaigns-section" aria-labelledby="campaigns-list-title">
+            <div class="container">
+                <h2 id="campaigns-list-title" class="visually-hidden">Список кампаний</h2>
+
+                <div class="campaign-filters" role="group" aria-labelledby="filter-title">
+                    <h3 id="filter-title" class="visually-hidden">Фильтры кампаний</h3>
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="sent">Отправлено</button>
+                    <button class="filter-btn" data-filter="sending">В процессе</button>
+                    <button class="filter-btn" data-filter="draft">Черновики</button>
+                </div>
+
+                <div class="campaigns-grid">
+                    <!-- Карточка кампании 1 -->
+                    <article class="campaign-card" role="article" data-status="sent" tabindex="0">
+                        <header class="campaign-header">
+                            <h3>Новогодняя акция 2024</h3>
+                            <span class="status-badge status-sent" aria-label="Статус: Отправлено">Отправлено</span>
+                        </header>
+
+                        <div class="campaign-meta">
+                            <dl>
+                                <dt>Получатели:</dt>
+                                <dd>15,247</dd>
+                                <dt>Дата отправки:</dt>
+                                <dd><time datetime="2024-12-20">20.12.2024</time></dd>
+                                <dt>Открытия:</dt>
+                                <dd>34.5%</dd>
+                            </dl>
+                        </div>
+
+                        <section class="email-preview" aria-labelledby="preview-title-1">
+                            <h4 id="preview-title-1" class="visually-hidden">Предпросмотр письма</h4>
+                            <div class="email-content">
+                                <strong>Тема:</strong> Новогодние скидки до 50%! 🎄<br>
+                                <strong>От:</strong> Магазин «Пример» <no-reply@example.com>
+                            </div>
+                        </section>
+                    </article>
+
+                    <!-- Карточка кампании 2 -->
+                    <article class="campaign-card" role="article" data-status="sending" tabindex="0">
+                        <header class="campaign-header">
+                            <h3>Welcome серия для новых клиентов</h3>
+                            <span class="status-badge status-sending" aria-label="Статус: В процессе отправки">В процессе</span>
+                        </header>
+
+                        <div class="campaign-meta">
+                            <dl>
+                                <dt>Получатели:</dt>
+                                <dd>8,451</dd>
+                                <dt>Начало отправки:</dt>
+                                <dd><time datetime="2024-12-25">25.12.2024</time></dd>
+                                <dt>Отправлено:</dt>
+                                <dd>2,134/8,451</dd>
+                            </dl>
+                        </div>
+
+                        <section class="email-preview" aria-labelledby="preview-title-2">
+                            <h4 id="preview-title-2" class="visually-hidden">Предпросмотр письма</h4>
+                            <div class="email-content">
+                                <strong>Тема:</strong> Добро пожаловать в нашу семью!<br>
+                                <strong>От:</strong> Команда поддержки <support@example.com>
+                            </div>
+                        </section>
+                    </article>
+
+                    <!-- Добавьте больше кампаний по аналогии -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Центр рассылок «Не спам, а ценность». Все права защищены.</p>
+            <address>
+                Контакты: <a href="mailto:info@nespam.ru">info@nespam.ru</a>
+            </address>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
