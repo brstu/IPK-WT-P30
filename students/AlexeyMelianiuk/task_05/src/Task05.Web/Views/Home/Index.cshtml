@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Главная страница";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Добро пожаловать в Task05</h1>
+    <p>Многослойное приложение ASP.NET Core с Identity и загрузкой файлов</p>
+    
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Загрузка файлов</h5>
+                    <p class="card-text">Загружайте файлы с проверкой типа и ограничением размера</p>
+                    <a href="@Url.Action("Upload", "File")" class="btn btn-primary">Перейти к загрузке</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Аутентификация</h5>
+                    <p class="card-text">Система регистрации и входа с использованием ASP.NET Core Identity</p>
+                    <a href="/Identity/Account/Login" class="btn btn-primary">Войти в систему</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ролевая система</h5>
+                    <p class="card-text">Разграничение прав доступа через роли пользователей</p>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a href="@Url.Action("Index", "Admin")" class="btn btn-success">Админ-панель</a>
+                    }
+                    else
+                    {
+                        <span class="text-muted">Требуется роль Admin</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Управление пользователями";
+}
+
+<h1>Управление пользователями</h1>
+
+<div class="card">
+    <div class="card-header">
+        <h5>Список пользователей</h5>
+    </div>
+    <div class="card-body">
+        <p>Здесь будет отображаться список всех зарегистрированных пользователей.</p>
+        <p>Функциональность управления пользователями будет реализована в будущем.</p>
+        
+        <div class="alert alert-info">
+            <strong>Текущий пользователь:</strong> @User.Identity.Name
+        </div>
+        
+        <a href="@Url.Action("Index", "Admin")" class="btn btn-secondary">Назад к админ-панели</a>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+/* Основные стили для приложения Task05 */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.validation-summary-errors {
+    color: #dc3545;
+}
+
+.field-validation-error {
+    color: #dc3545;
+    font-size: 0.875em;
+}
+
+.input-validation-error {
+    border-color: #dc3545;
+}
+
+/* Стили для карточек файлов */
+.file-card {
+    transition: transform 0.2s;
+}
+
+.file-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Стили для админ-панели */
+.admin-panel {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Стили для форм */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
