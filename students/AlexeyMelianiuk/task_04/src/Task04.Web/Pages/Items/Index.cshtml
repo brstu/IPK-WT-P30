@@ -1,0 +1,50 @@
+@page
+@model Task04.Web.Pages.Items.IndexModel
+@{
+    ViewData["Title"] = "Список элементов";
+}
+
+<h2>Список элементов</h2>
+
+<div class="list-group">
+    @foreach (var item in Model.Items)
+    {
+        <a href="/items/@item.Id" class="list-group-item list-group-item-action">
+            <h5>@item.Name</h5>
+            <p class="mb-1">@item.Description</p>
+            <small>ID: @item.Id</small>
+        </a>
+    }
+</div>
+
+<div class="mt-4">
+    <h4>Тестирование привязки модели</h4>
+    <form method="get" asp-page="/Items/Index">
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="search" class="col-form-label">Поиск:</label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="search" name="search" class="form-control" value="@Model.Search" />
+            </div>
+            <div class="col-auto">
+                <label for="category" class="col-form-label">Категория:</label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="category" name="category" class="form-control" value="@Model.Category" />
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Фильтровать</button>
+            </div>
+        </div>
+    </form>
+    
+    @if (!string.IsNullOrEmpty(Model.Search) || !string.IsNullOrEmpty(Model.Category))
+    {
+        <div class="alert alert-info mt-3">
+            <strong>Параметры запроса:</strong><br />
+            Поиск: @(string.IsNullOrEmpty(Model.Search) ? "не указан" : Model.Search)<br />
+            Категория: @(string.IsNullOrEmpty(Model.Category) ? "не указана" : Model.Category)
+        </div>
+    }
+</div>
