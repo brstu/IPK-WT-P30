@@ -1,0 +1,33 @@
+@page
+@model Task04.Web.Pages.Items.IndexModel
+@{
+    ViewData["Title"] = "Список элементов";
+}
+
+<div class="container">
+    <h1>Список элементов</h1>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Цена</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Price ₽</td>
+                    <td>
+                        <a href="/items/@item.Id" class="btn btn-info btn-sm">Детали</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

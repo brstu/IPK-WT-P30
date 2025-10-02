@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР03 — Финансовый учёт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Отчёт по расходам</h1>
+
+    <!-- Контейнер для статусов загрузки/ошибок -->
+    <div id="status">Загрузка данных...</div>
+
+    <!-- Контейнер для таблицы -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID расхода</th>
+                <th>Категория</th>
+                <th>Сумма (усл. ед.)</th>
+                <th>Статус</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Данные будут вставлены с помощью JavaScript -->
+        </tbody>
+    </table>
+
+    <!-- Контейнер для пагинации -->
+    <div class="pager">
+        <button id="prev" disabled>Назад</button>
+        <span id="page-info">Стр. 1/1</span>
+        <button id="next" disabled>Вперед</button>
+        <button id="clear-cache">Очистить кэш</button>
+    </div>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>

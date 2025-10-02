@@ -1,0 +1,1902 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомобили - Каршеринг Для Вас</title>
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Стили для header */
+        header {
+            background: linear-gradient(135deg, #1a3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #4CAF50;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover,
+        nav a:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+            outline: 2px solid white;
+        }
+        
+        .user-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+        }
+        
+        .btn-login {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .btn-register {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Основной контент */
+        main {
+            padding: 30px 0;
+            min-height: calc(100vh - 200px);
+        }
+        
+        .page-title {
+            margin-bottom: 10px;
+            color: #1a3a5f;
+            font-size: 36px;
+        }
+        
+        .page-subtitle {
+            margin-bottom: 30px;
+            color: #6c757d;
+            font-size: 18px;
+        }
+        
+        /* Макет страницы */
+        .page-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 900px) {
+            .page-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Фильтры */
+        .filters-sidebar {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .filters-title {
+            margin-bottom: 20px;
+            color: #1a3a5f;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .reset-filters {
+            color: #4CAF50;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .filter-group {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .filter-group:last-child {
+            border-bottom: none;
+        }
+        
+        .filter-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #1a3a5f;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .filter-option input {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .price-range {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .price-input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .range-slider {
+            width: 100%;
+            height: 5px;
+            background: #e9ecef;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        /* Сетка автомобилей */
+        .cars-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .sort-options {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .sort-select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+        }
+        
+        .cars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .car-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .car-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .car-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .car-image {
+            height: 180px;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6c757d;
+            position: relative;
+        }
+        
+        .car-details {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .car-name {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #1a3a5f;
+        }
+        
+        .car-class {
+            color: #6c757d;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .car-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .car-feature {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+        
+        .car-price {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price-amount {
+            font-size: 22px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        
+        .price-period {
+            font-size: 14px;
+            color: #6c757d;
+        }
+        
+        .btn-book {
+            background-color: #1a3a5f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        
+        .btn-book:hover {
+            background-color: #0f2742;
+        }
+        
+        /* Пагинация */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 10px;
+        }
+        
+        .pagination-item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #1a3a5f;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .pagination-item.active {
+            background-color: #1a3a5f;
+            color: white;
+            border-color: #1a3a5f;
+        }
+        
+        .pagination-item:hover:not(.active) {
+            background-color: #f8f9fa;
+        }
+        
+        /* Быстрый поиск */
+        .quick-search {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .search-form {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .search-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        /* Футер */
+        footer {
+            background-color: #1a3a5f;
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #e9ecef;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e9ecef;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .page-title {
+                font-size: 28px;
+            }
+            
+            .page-subtitle {
+                font-size: 16px;
+            }
+            
+            .cars-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .search-form {
+                flex-direction: column;
+            }
+        }
+        
+        /* Стили для активной страницы */
+        .current-page {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Каршеринг<span>ДляВас</span></a>
+                
+                <nav aria-label="Главное меню">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="CarsharingP1.html" class="current-page">Автомобили</a></li>
+                        <li><a href="CarsharingP2.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-actions">
+                    <a href="#" class="btn btn-login">Войти</a>
+                    <a href="#" class="btn btn-register">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1 class="page-title">Наш автопарк</h1>
+            <p class="page-subtitle">Выберите идеальный автомобиль для вашей поездки</p>
+            
+            <div class="quick-search">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Поиск по марке или модели...">
+                    <button type="submit" class="search-button">Найти</button>
+                </form>
+            </div>
+            
+            <div class="page-layout">
+                <aside class="filters-sidebar">
+                    <div class="filters-title">
+                        <span>Фильтры</span>
+                        <button class="reset-filters">Сбросить</button>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Класс автомобиля</label>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="class" value="economy"> Эконом
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="class" value="comfort"> Комфорт
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="class" value="business"> Бизнес
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="class" value="suv"> Внедорожник
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="class" value="minivan"> Минивэн
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Коробка передач</label>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="transmission" value="automatic"> Автомат
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="transmission" value="manual"> Механика
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Тип топлива</label>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="fuel" value="petrol"> Бензин
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="fuel" value="diesel"> Дизель
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="fuel" value="electric"> Электро
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="fuel" value="hybrid"> Гибрид
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Цена за час</label>
+                        <div class="price-range">
+                            <input type="number" class="price-input" placeholder="от" id="min-price">
+                            <input type="number" class="price-input" placeholder="до" id="max-price">
+                        </div>
+                        <input type="range" class="range-slider" min="0" max="1000" value="500">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Количество мест</label>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="seats" value="4"> до 4 мест
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="seats" value="5"> 5 мест
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="seats" value="7"> 7 мест и более
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+                
+                <div class="cars-content">
+                    <div class="cars-header">
+                        <div class="results-count">Найдено 12 автомобилей</div>
+                        <div class="sort-options">
+                            <span>Сортировка:</span>
+                            <select class="sort-select">
+                                <option value="price-asc">По цене (сначала дешевые)</option>
+                                <option value="price-desc">По цене (сначала дорогие)</option>
+                                <option value="name">По названию</option>
+                                <option value="class">По классу</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="cars-grid">
+                        <!-- Автомобиль 1 -->
+                        <div class="car-card" data-class="economy" data-transmission="automatic" data-fuel="petrol" data-price="350" data-seats="5">
+                            <div class="car-image">
+                                <div class="car-badge">Популярный</div>
+                                <span>🚗 Kia Rio</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Kia Rio</h3>
+                                <div class="car-class">Эконом-класс</div>
+                                <div class="car-features">
+                                    <div class="car-feature">🔄 Автомат</div>
+                                    <div class="car-feature">⛽ Бензин</div>
+                                    <div class="car-feature">👥 5 мест</div>
+                                    <div class="car-feature">❄️ Кондиционер</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">7,00 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Автомобиль 2 -->
+                        <div class="car-card" data-class="comfort" data-transmission="automatic" data-fuel="petrol" data-price="450" data-seats="5">
+                            <div class="car-image">
+                                <span>🚙 Hyundai Solaris</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Hyundai Solaris</h3>
+                                <div class="car-class">Комфорт-класс</div>
+                                <div class="car-features">
+                                    <div class="car-feature">🔄 Автомат</div>
+                                    <div class="car-feature">⛽ Бензин</div>
+                                    <div class="car-feature">👥 5 мест</div>
+                                    <div class="car-feature">❄️ Кондиционер</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">6,00 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Автомобиль 3 -->
+                        <div class="car-card" data-class="suv" data-transmission="automatic" data-fuel="diesel" data-price="650" data-seats="5">
+                            <div class="car-image">
+                                <span>🚙 Hyundai Creta</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Hyundai Creta</h3>
+                                <div class="car-class">Внедорожник</div>
+                                <div class="car-features">
+                                    <div class="car-feature">🔄 Автомат</div>
+                                    <div class="car-feature">⛽ Дизель</div>
+                                    <div class="car-feature">👥 5 мест</div>
+                                    <div class="car-feature">❄️ Кондиционер</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">8,00 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Автомобиль 4 -->
+                        <div class="car-card" data-class="business" data-transmission="automatic" data-fuel="petrol" data-price="850" data-seats="5">
+                            <div class="car-image">
+                                <div class="car-badge">Премиум</div>
+                                <span>🚗 Skoda Octavia</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Skoda Octavia</h3>
+                                <div class="car-class">Бизнес-класс</div>
+                                <div class="car-features">
+                                    <div class="car-feature">🔄 Автомат</div>
+                                    <div class="car-feature">⛽ Бензин</div>
+                                    <div class="car-feature">👥 5 мест</div>
+                                    <div class="car-feature">❄️ Климат-контроль</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">8,50 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Автомобиль 5 -->
+                        <div class="car-card" data-class="minivan" data-transmission="automatic" data-fuel="petrol" data-price="750" data-seats="7">
+                            <div class="car-image">
+                                <span>🚙 Volkswagen Multivan</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Volkswagen Multivan</h3>
+                                <div class="car-class">Минивэн</div>
+                                <div class="car-features">
+                                    <div class="car-feature">🔄 Автомат</div>
+                                    <div class="car-feature">⛽ Бензин</div>
+                                    <div class="car-feature">👥 7 мест</div>
+                                    <div class="car-feature">❄️ Климат-контроль</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">7,00 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Автомобиль 6 -->
+                        <div class="car-card" data-class="economy" data-transmission="manual" data-fuel="petrol" data-price="300" data-seats="5">
+                            <div class="car-image">
+                                <span>🚗 Lada Vesta</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Lada Vesta</h3>
+                                <div class="car-class">Эконом-класс</div>
+                                <div class="car-features">
+                                    <div class="car-feature">⚙️ Механика</div>
+                                    <div class="car-feature">⛽ Бензин</div>
+                                    <div class="car-feature">👥 5 мест</div>
+                                    <div class="car-feature">❄️ Кондиционер</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">6,00 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pagination">
+                        <a href="#" class="pagination-item active">1</a>
+                        <a href="#" class="pagination-item">2</a>
+                        <a href="#" class="pagination-item">3</a>
+                        <a href="#" class="pagination-item">→</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">Каршеринг Для Вас</h3>
+                    <p>Сервис каршеринга №1 в вашем городе. Быстро, удобно и выгодно.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+375 29 123 45 67">8 (0162) 33-62-97</a></li>
+                        <li><a href="mailto:info@carsharing.ru">info@carsharing.ru</a></li>
+                        <li><a href="CarsharingP2.html">Обратная связь</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Помощь</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Частые вопросы</a></li>
+                        <li><a href="#">Правила использования</a></li>
+                        <li><a href="#">Страхование</a></li>
+                        <li><a href="#">Поддержка</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">О нас</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Для бизнеса</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Каршеринг Для Вас. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Базовая фильтрация автомобилей
+        document.querySelectorAll('.filters-sidebar input').forEach(input => {
+            input.addEventListener('change', filterCars);
+        });
+        
+        function filterCars() {
+            const cars = document.querySelectorAll('.car-card');
+            let visibleCount = 0;
+            
+            cars.forEach(car => {
+                let showCar = true;
+                
+                // Проверка класса автомобиля
+                const classFilters = Array.from(document.querySelectorAll('input[name="class"]:checked'))
+                    .map(checkbox => checkbox.value);
+                if (classFilters.length > 0) {
+                    const carClass = car.getAttribute('data-class');
+                    if (!classFilters.includes(carClass)) {
+                        showCar = false;
+                    }
+                }
+                
+                // Проверка коробки передач
+                const transmissionFilters = Array.from(document.querySelectorAll('input[name="transmission"]:checked'))
+                    .map(checkbox => checkbox.value);
+                if (transmissionFilters.length > 0) {
+                    const carTransmission = car.getAttribute('data-transmission');
+                    if (!transmissionFilters.includes(carTransmission)) {
+                        showCar = false;
+                    }
+                }
+                
+                // Проверка типа топлива
+                const fuelFilters = Array.from(document.querySelectorAll('input[name="fuel"]:checked'))
+                    .map(checkbox => checkbox.value);
+                if (fuelFilters.length > 0) {
+                    const carFuel = car.getAttribute('data-fuel');
+                    if (!fuelFilters.includes(carFuel)) {
+                        showCar = false;
+                    }
+                }
+                
+                // Проверка количества мест
+                const seatsFilters = Array.from(document.querySelectorAll('input[name="seats"]:checked'))
+                    .map(checkbox => checkbox.value);
+                if (seatsFilters.length > 0) {
+                    const carSeats = car.getAttribute('data-seats');
+                    let seatMatch = false;
+                    seatsFilters.forEach(filter => {
+                        if (filter === '4' && carSeats <= 4) seatMatch = true;
+                        if (filter === '5' && carSeats == 5) seatMatch = true;
+                        if (filter === '7' && carSeats >= 7) seatMatch = true;
+                    });
+                    if (!seatMatch) showCar = false;
+                }
+                
+                // Проверка цены
+                const minPrice = document.getElementById('min-price').value || 0;
+                const maxPrice = document.getElementById('max-price').value || 10000;
+                const carPrice = parseInt(car.getAttribute('data-price'));
+                
+                if (carPrice < minPrice || carPrice > maxPrice) {
+                    showCar = false;
+                }
+                
+                // Показать/скрыть автомобиль
+                car.style.display = showCar ? 'flex' : 'none';
+                if (showCar) visibleCount++;
+            });
+            
+            // Обновить счетчик результатов
+            document.querySelector('.results-count').textContent = `Найдено ${visibleCount} автомобилей`;
+        }
+        
+        // Сброс фильтров
+        document.querySelector('.reset-filters').addEventListener('click', function() {
+            document.querySelectorAll('.filters-sidebar input').forEach(input => {
+                if (input.type === 'checkbox') {
+                    input.checked = false;
+                } else if (input.type === 'number') {
+                    input.value = '';
+                } else if (input.type === 'range') {
+                    input.value = 500;
+                }
+            });
+            filterCars();
+        });
+        
+        // Поиск по названию
+        document.querySelector('.search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = document.querySelector('.search-input').value.toLowerCase();
+            const cars = document.querySelectorAll('.car-card');
+            let visibleCount = 0;
+            
+            cars.forEach(car => {
+                const carName = car.querySelector('.car-name').textContent.toLowerCase();
+                if (carName.includes(searchTerm)) {
+                    car.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    car.style.display = 'none';
+                }
+            });
+            
+            document.querySelector('.results-count').textContent = `Найдено ${visibleCount} автомобилей`;
+        });
+    </script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомобили - Каршеринг Для Вас</title>
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Стили для header */
+        header {
+            background: linear-gradient(135deg, #1a3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #4CAF50;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover,
+        nav a:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+            outline: 2px solid white;
+        }
+        
+        .user-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+        }
+        
+        .btn-login {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .btn-register {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Основной контент */
+        main {
+            padding: 30px 0;
+            min-height: calc(100vh - 200px);
+        }
+        
+        .page-title {
+            margin-bottom: 10px;
+            color: #1a3a5f;
+            font-size: 36px;
+        }
+        
+        .page-subtitle {
+            margin-bottom: 30px;
+            color: #6c757d;
+            font-size: 18px;
+        }
+        
+        /* Макет страницы */
+        .page-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 900px) {
+            .page-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Фильтры */
+        .filters-sidebar {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .filters-title {
+            margin-bottom: 20px;
+            color: #1a3a5f;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .reset-filters {
+            color: #4CAF50;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .filter-group {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .filter-group:last-child {
+            border-bottom: none;
+        }
+        
+        .filter-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #1a3a5f;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .filter-option input {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .price-range {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .price-input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .range-slider {
+            width: 100%;
+            height: 5px;
+            background: #e9ecef;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        /* Сетка автомобилей */
+        .cars-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .sort-options {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .sort-select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+        }
+        
+        .cars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .car-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .car-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .car-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .car-image {
+            height: 180px;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6c757d;
+            position: relative;
+        }
+        
+        .car-details {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .car-name {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #1a3a5f;
+        }
+        
+        .car-class {
+            color: #6c757d;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .car-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .car-feature {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+        
+        .car-price {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price-amount {
+            font-size: 22px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        
+        .price-period {
+            font-size: 14px;
+            color: #6c757d;
+        }
+        
+        .btn-book {
+            background-color: #1a3a5f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        
+        .btn-book:hover {
+            background-color: #0f2742;
+        }
+        
+        /* Пагинация */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 10px;
+        }
+        
+        .pagination-item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #1a3a5f;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .pagination-item.active {
+            background-color: #1a3a5f;
+            color: white;
+            border-color: #1a3a5f;
+        }
+        
+        .pagination-item:hover:not(.active) {
+            background-color: #f8f9fa;
+        }
+        
+        /* Быстрый поиск */
+        .quick-search {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .search-form {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .search-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        /* Футер */
+        footer {
+            background-color: #1a3a5f;
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #e9ecef;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e9ecef;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .page-title {
+                font-size: 28px;
+            }
+            
+            .page-subtitle {
+                font-size: 16px;
+            }
+            
+            .cars-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .search-form {
+                flex-direction: column;
+            }
+        }
+        
+        /* Стили для активной страницы */
+        .current-page {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Каршеринг<span>ДляВас</span></a>
+                
+                <nav aria-label="Главное меню">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="CarsharingP1.html" class="current-page">Автомобили</a></li>
+                        <li><a href="CarsharingP2.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-actions">
+                    <a href="#" class="btn btn-login">Войти</a>
+                    <a href="#" class="btn btn-register">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1 class="page-title">Наш автопарк</h1>
+            <p class="page-subtitle">Выберите идеальный автомобиль для вашей поездки</p>
+            
+            <div class="quick-search">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Поиск по марке или модели...">
+                    <button type="submit" class="search-button">Найти</button>
+                </form>
+            </div>
+            
+            <div class="page-layout">
+                <aside class="filters-sidebar">
+                    <div class="filters-title">
+                        <span>Фильтры</span>
+                        <button class="reset-filters">Сбросить</button>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Класс автомобиля</label>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="class" value="economy"> Эконом
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="class" value="comfort"> Комфорт
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="class" value="business"> Бизнес
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="class" value="suv"> Внедорожник
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="class" value="minivan"> Минивэн
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Коробка передач</label>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="transmission" value="automatic"> Автомат
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="transmission" value="manual"> Механика
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Тип топлива</label>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="fuel" value="petrol"> Бензин
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="fuel" value="diesel"> Дизель
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="fuel" value="electric"> Электро
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="fuel" value="hybrid"> Гибрид
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Цена за час</label>
+                        <div class="price-range">
+                            <input type="number" class="price-input" placeholder="от" id="min-price">
+                            <input type="number" class="price-input" placeholder="до" id="max-price">
+                        </div>
+                        <input type="range" class="range-slider" min="0" max="1000" value="500">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Количество мест</label>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="seats" value="4"> до 4 мест
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="seats" value="5"> 5 мест
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="seats" value="7"> 7 мест и более
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+                
+                <div class="cars-content">
+                    <div class="cars-header">
+                        <div class="results-count">Найдено 12 автомобилей</div>
+                        <div class="sort-options">
+                            <span>Сортировка:</span>
+                            <select class="sort-select">
+                                <option value="price-asc">По цене (сначала дешевые)</option>
+                                <option value="price-desc">По цене (сначала дорогие)</option>
+                                <option value="name">По названию</option>
+                                <option value="class">По классу</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="cars-grid">
+                        <!-- Автомобиль 1 -->
+                        <div class="car-card" data-class="economy" data-transmission="automatic" data-fuel="petrol" data-price="350" data-seats="5">
+                            <div class="car-image">
+                                <div class="car-badge">Популярный</div>
+                                <span>🚗 Kia Rio</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Kia Rio</h3>
+                                <div class="car-class">Эконом-класс</div>
+                                <div class="car-features">
+                                    <div class="car-feature">🔄 Автомат</div>
+                                    <div class="car-feature">⛽ Бензин</div>
+                                    <div class="car-feature">👥 5 мест</div>
+                                    <div class="car-feature">❄️ Кондиционер</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">7,00 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Автомобиль 2 -->
+                        <div class="car-card" data-class="comfort" data-transmission="automatic" data-fuel="petrol" data-price="450" data-seats="5">
+                            <div class="car-image">
+                                <span>🚙 Hyundai Solaris</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Hyundai Solaris</h3>
+                                <div class="car-class">Комфорт-класс</div>
+                                <div class="car-features">
+                                    <div class="car-feature">🔄 Автомат</div>
+                                    <div class="car-feature">⛽ Бензин</div>
+                                    <div class="car-feature">👥 5 мест</div>
+                                    <div class="car-feature">❄️ Кондиционер</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">6,00 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Автомобиль 3 -->
+                        <div class="car-card" data-class="suv" data-transmission="automatic" data-fuel="diesel" data-price="650" data-seats="5">
+                            <div class="car-image">
+                                <span>🚙 Hyundai Creta</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Hyundai Creta</h3>
+                                <div class="car-class">Внедорожник</div>
+                                <div class="car-features">
+                                    <div class="car-feature">🔄 Автомат</div>
+                                    <div class="car-feature">⛽ Дизель</div>
+                                    <div class="car-feature">👥 5 мест</div>
+                                    <div class="car-feature">❄️ Кондиционер</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">8,00 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Автомобиль 4 -->
+                        <div class="car-card" data-class="business" data-transmission="automatic" data-fuel="petrol" data-price="850" data-seats="5">
+                            <div class="car-image">
+                                <div class="car-badge">Премиум</div>
+                                <span>🚗 Skoda Octavia</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Skoda Octavia</h3>
+                                <div class="car-class">Бизнес-класс</div>
+                                <div class="car-features">
+                                    <div class="car-feature">🔄 Автомат</div>
+                                    <div class="car-feature">⛽ Бензин</div>
+                                    <div class="car-feature">👥 5 мест</div>
+                                    <div class="car-feature">❄️ Климат-контроль</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">8,50 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Автомобиль 5 -->
+                        <div class="car-card" data-class="minivan" data-transmission="automatic" data-fuel="petrol" data-price="750" data-seats="7">
+                            <div class="car-image">
+                                <span>🚙 Volkswagen Multivan</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Volkswagen Multivan</h3>
+                                <div class="car-class">Минивэн</div>
+                                <div class="car-features">
+                                    <div class="car-feature">🔄 Автомат</div>
+                                    <div class="car-feature">⛽ Бензин</div>
+                                    <div class="car-feature">👥 7 мест</div>
+                                    <div class="car-feature">❄️ Климат-контроль</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">7,00 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Автомобиль 6 -->
+                        <div class="car-card" data-class="economy" data-transmission="manual" data-fuel="petrol" data-price="300" data-seats="5">
+                            <div class="car-image">
+                                <span>🚗 Lada Vesta</span>
+                            </div>
+                            <div class="car-details">
+                                <h3 class="car-name">Lada Vesta</h3>
+                                <div class="car-class">Эконом-класс</div>
+                                <div class="car-features">
+                                    <div class="car-feature">⚙️ Механика</div>
+                                    <div class="car-feature">⛽ Бензин</div>
+                                    <div class="car-feature">👥 5 мест</div>
+                                    <div class="car-feature">❄️ Кондиционер</div>
+                                </div>
+                                <div class="car-price">
+                                    <div>
+                                        <span class="price-amount">6,00 руб.</span>
+                                        <span class="price-period">/ час</span>
+                                    </div>
+                                    <a href="#" class="btn-book">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pagination">
+                        <a href="#" class="pagination-item active">1</a>
+                        <a href="#" class="pagination-item">2</a>
+                        <a href="#" class="pagination-item">3</a>
+                        <a href="#" class="pagination-item">→</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">Каршеринг Для Вас</h3>
+                    <p>Сервис каршеринга №1 в вашем городе. Быстро, удобно и выгодно.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+375 29 123 45 67">8 (0162) 33-62-97</a></li>
+                        <li><a href="mailto:info@carsharing.ru">info@carsharing.ru</a></li>
+                        <li><a href="CarsharingP2.html">Обратная связь</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Помощь</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Частые вопросы</a></li>
+                        <li><a href="#">Правила использования</a></li>
+                        <li><a href="#">Страхование</a></li>
+                        <li><a href="#">Поддержка</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">О нас</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Для бизнеса</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Каршеринг Для Вас. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Базовая фильтрация автомобилей
+        document.querySelectorAll('.filters-sidebar input').forEach(input => {
+            input.addEventListener('change', filterCars);
+        });
+        
+        function filterCars() {
+            const cars = document.querySelectorAll('.car-card');
+            let visibleCount = 0;
+            
+            cars.forEach(car => {
+                let showCar = true;
+                
+                // Проверка класса автомобиля
+                const classFilters = Array.from(document.querySelectorAll('input[name="class"]:checked'))
+                    .map(checkbox => checkbox.value);
+                if (classFilters.length > 0) {
+                    const carClass = car.getAttribute('data-class');
+                    if (!classFilters.includes(carClass)) {
+                        showCar = false;
+                    }
+                }
+                
+                // Проверка коробки передач
+                const transmissionFilters = Array.from(document.querySelectorAll('input[name="transmission"]:checked'))
+                    .map(checkbox => checkbox.value);
+                if (transmissionFilters.length > 0) {
+                    const carTransmission = car.getAttribute('data-transmission');
+                    if (!transmissionFilters.includes(carTransmission)) {
+                        showCar = false;
+                    }
+                }
+                
+                // Проверка типа топлива
+                const fuelFilters = Array.from(document.querySelectorAll('input[name="fuel"]:checked'))
+                    .map(checkbox => checkbox.value);
+                if (fuelFilters.length > 0) {
+                    const carFuel = car.getAttribute('data-fuel');
+                    if (!fuelFilters.includes(carFuel)) {
+                        showCar = false;
+                    }
+                }
+                
+                // Проверка количества мест
+                const seatsFilters = Array.from(document.querySelectorAll('input[name="seats"]:checked'))
+                    .map(checkbox => checkbox.value);
+                if (seatsFilters.length > 0) {
+                    const carSeats = car.getAttribute('data-seats');
+                    let seatMatch = false;
+                    seatsFilters.forEach(filter => {
+                        if (filter === '4' && carSeats <= 4) seatMatch = true;
+                        if (filter === '5' && carSeats == 5) seatMatch = true;
+                        if (filter === '7' && carSeats >= 7) seatMatch = true;
+                    });
+                    if (!seatMatch) showCar = false;
+                }
+                
+                // Проверка цены
+                const minPrice = document.getElementById('min-price').value || 0;
+                const maxPrice = document.getElementById('max-price').value || 10000;
+                const carPrice = parseInt(car.getAttribute('data-price'));
+                
+                if (carPrice < minPrice || carPrice > maxPrice) {
+                    showCar = false;
+                }
+                
+                // Показать/скрыть автомобиль
+                car.style.display = showCar ? 'flex' : 'none';
+                if (showCar) visibleCount++;
+            });
+            
+            // Обновить счетчик результатов
+            document.querySelector('.results-count').textContent = `Найдено ${visibleCount} автомобилей`;
+        }
+        
+        // Сброс фильтров
+        document.querySelector('.reset-filters').addEventListener('click', function() {
+            document.querySelectorAll('.filters-sidebar input').forEach(input => {
+                if (input.type === 'checkbox') {
+                    input.checked = false;
+                } else if (input.type === 'number') {
+                    input.value = '';
+                } else if (input.type === 'range') {
+                    input.value = 500;
+                }
+            });
+            filterCars();
+        });
+        
+        // Поиск по названию
+        document.querySelector('.search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = document.querySelector('.search-input').value.toLowerCase();
+            const cars = document.querySelectorAll('.car-card');
+            let visibleCount = 0;
+            
+            cars.forEach(car => {
+                const carName = car.querySelector('.car-name').textContent.toLowerCase();
+                if (carName.includes(searchTerm)) {
+                    car.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    car.style.display = 'none';
+                }
+            });
+            
+            document.querySelector('.results-count').textContent = `Найдено ${visibleCount} автомобилей`;
+        });
+    </script>
+</body>
+>>>>>>> b0d6da391134a1e4e70ca85af64d11b964cecf3b
+</html>

@@ -1,0 +1,1080 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Медиатека</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .registration-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        .card-header {
+            background: #4a5568;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .card-header h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .card-header p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        .card-body {
+            padding: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2d3748;
+        }
+        
+        .input-wrapper {
+            position: relative;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+        }
+        
+        .input-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #a0aec0;
+        }
+        
+        .error-message {
+            color: #e53e3e;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .success-message {
+            color: #38a169;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .password-strength {
+            height: 4px;
+            background: #e2e8f0;
+            border-radius: 2px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        
+        .password-strength-bar {
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s, background 0.3s;
+        }
+        
+        .password-requirements {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #718096;
+        }
+        
+        .requirement {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .requirement i {
+            margin-right: 8px;
+            font-size: 12px;
+        }
+        
+        .requirement.valid {
+            color: #38a169;
+        }
+        
+        .requirement.valid i {
+            color: #38a169;
+        }
+        
+        .btn {
+            background: #4a5568;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2d3748;
+        }
+        
+        .optional-label {
+            font-size: 12px;
+            color: #718096;
+            margin-left: 5px;
+            font-weight: normal;
+        }
+        
+        .media-library {
+            margin-top: 30px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+        }
+        
+        .media-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .media-item {
+            aspect-ratio: 1;
+            background: #f7fafc;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #a0aec0;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .media-item:hover {
+            background: #edf2f7;
+        }
+        
+        .media-item.selected {
+            border-color: #4299e1;
+            background: #ebf8ff;
+            color: #4299e1;
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #718096;
+        }
+        
+        .login-link a {
+            color: #4299e1;
+            text-decoration: none;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 480px) {
+            .card-body {
+                padding: 20px;
+            }
+            
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="registration-card">
+            <div class="card-header">
+                <h1>Регистрация в Медиатеке</h1>
+                <p>Создайте аккаунт для доступа к коллекции медиа</p>
+            </div>
+            
+            <div class="card-body">
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" placeholder="example@mail.com" required>
+                            <span class="input-icon">✉️</span>
+                        </div>
+                        <div class="error-message" id="email-error">Введите корректный email адрес</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон (RU/BY)</label>
+                        <div class="input-wrapper">
+                            <input type="tel" id="phone" placeholder="+7 (999) 123-45-67" required>
+                            <span class="input-icon">📞</span>
+                        </div>
+                        <div class="error-message" id="phone-error">Введите корректный номер телефона РФ или Беларуси</div>
+                        <div class="success-message" id="phone-success">Номер телефона корректен</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="password" placeholder="Введите пароль" required>
+                            <span class="input-icon">🔒</span>
+                        </div>
+                        <div class="password-strength">
+                            <div class="password-strength-bar" id="password-strength-bar"></div>
+                        </div>
+                        <div class="password-requirements">
+                            <div class="requirement" id="req-length">
+                                <i>○</i> <span>8-64 символов</span>
+                            </div>
+                            <div class="requirement" id="req-space">
+                                <i>○</i> <span>Без пробелов</span>
+                            </div>
+                            <div class="requirement" id="req-special">
+                                <i>○</i> <span>Минимум 1 спецсимвол</span>
+                            </div>
+                        </div>
+                        <div class="error-message" id="password-error">Пароль не соответствует требованиям</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="website">Персональный сайт <span class="optional-label">(опционально)</span></label>
+                        <div class="input-wrapper">
+                            <input type="url" id="website" placeholder="https://example.com">
+                            <span class="input-icon">🌐</span>
+                        </div>
+                        <div class="error-message" id="website-error">Введите корректный HTTPS URL</div>
+                    </div>
+                    
+                    <div class="media-library">
+                        <h3 class="media-title">Выберите тип медиатеки</h3>
+                        <div class="media-grid">
+                            <div class="media-item" data-type="music">🎵</div>
+                            <div class="media-item" data-type="video">🎬</div>
+                            <div class="media-item" data-type="books">📚</div>
+                            <div class="media-item" data-type="photos">🖼️</div>
+                            <div class="media-item" data-type="podcasts">🎙️</div>
+                            <div class="media-item" data-type="art">🎨</div>
+                        </div>
+                        <input type="hidden" id="media-type" value="">
+                        <div class="error-message" id="media-error">Пожалуйста, выберите тип медиатеки</div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Зарегистрироваться</button>
+                    
+                    <div class="login-link">
+                        Уже есть аккаунт? <a href="#">Войти</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registration-form');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const passwordInput = document.getElementById('password');
+            const websiteInput = document.getElementById('website');
+            const mediaItems = document.querySelectorAll('.media-item');
+            const mediaTypeInput = document.getElementById('media-type');
+            
+            // Валидация email
+            emailInput.addEventListener('blur', function() {
+                const email = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const errorElement = document.getElementById('email-error');
+                
+                if (!emailRegex.test(email)) {
+                    showError(emailInput, errorElement);
+                } else {
+                    hideError(emailInput, errorElement);
+                }
+            });
+            
+            // Валидация телефона
+            phoneInput.addEventListener('input', function() {
+                formatPhoneNumber();
+                validatePhone();
+            });
+            
+            phoneInput.addEventListener('blur', validatePhone);
+            
+            function formatPhoneNumber() {
+                let value = phoneInput.value.replace(/\D/g, '');
+                
+                if (value.startsWith('7') || value.startsWith('8')) {
+                    // Российский номер
+                    if (value.length > 1) value = '+7 ' + value.substring(1);
+                    if (value.length > 6) value = value.substring(0, 6) + ' ' + value.substring(6);
+                    if (value.length > 10) value = value.substring(0, 10) + '-' + value.substring(10);
+                    if (value.length > 13) value = value.substring(0, 13) + '-' + value.substring(13);
+                } else if (value.startsWith('375')) {
+                    // Белорусский номер
+                    if (value.length > 3) value = '+375 ' + value.substring(3);
+                    if (value.length > 7) value = value.substring(0, 7) + ' ' + value.substring(7);
+                    if (value.length > 10) value = value.substring(0, 10) + '-' + value.substring(10);
+                    if (value.length > 13) value = value.substring(0, 13) + '-' + value.substring(13);
+                }
+                
+                phoneInput.value = value;
+            }
+            
+            function validatePhone() {
+                const value = phoneInput.value.replace(/\D/g, '');
+                const errorElement = document.getElementById('phone-error');
+                const successElement = document.getElementById('phone-success');
+                
+                // Российские номера: +7, 11 цифр
+                // Белорусские номера: +375, 12 цифр
+                const isValid = 
+                    (value.startsWith('7') && value.length === 11) ||
+                    (value.startsWith('375') && value.length === 12);
+                
+                if (!isValid) {
+                    showError(phoneInput, errorElement);
+                    successElement.style.display = 'none';
+                } else {
+                    hideError(phoneInput, errorElement);
+                    successElement.style.display = 'block';
+                }
+            }
+            
+            // Валидация пароля
+            passwordInput.addEventListener('input', function() {
+                validatePassword();
+                updatePasswordStrength();
+            });
+            
+            function validatePassword() {
+                const password = passwordInput.value;
+                const lengthReq = document.getElementById('req-length');
+                const spaceReq = document.getElementById('req-space');
+                const specialReq = document.getElementById('req-special');
+                const errorElement = document.getElementById('password-error');
+                
+                // Проверка длины
+                const hasValidLength = password.length >= 8 && password.length <= 64;
+                updateRequirement(lengthReq, hasValidLength);
+                
+                // Проверка на пробелы
+                const hasNoSpaces = !/\s/.test(password);
+                updateRequirement(spaceReq, hasNoSpaces);
+                
+                // Проверка на спецсимволы
+                const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+                updateRequirement(specialReq, hasSpecialChar);
+                
+                const isValid = hasValidLength && hasNoSpaces && hasSpecialChar;
+                
+                if (!isValid && password.length > 0) {
+                    errorElement.style.display = 'block';
+                } else {
+                    errorElement.style.display = 'none';
+                }
+                
+                return isValid;
+            }
+            
+            function updateRequirement(element, isValid) {
+                if (isValid) {
+                    element.classList.add('valid');
+                    element.querySelector('i').textContent = '✓';
+                } else {
+                    element.classList.remove('valid');
+                    element.querySelector('i').textContent = '○';
+                }
+            }
+            
+            function updatePasswordStrength() {
+                const password = passwordInput.value;
+                const strengthBar = document.getElementById('password-strength-bar');
+                let strength = 0;
+                
+                if (password.length >= 8) strength += 25;
+                if (password.length >= 12) strength += 25;
+                if (/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) strength += 25;
+                if (/[A-Z]/.test(password) && /[a-z]/.test(password)) strength += 25;
+                
+                strengthBar.style.width = strength + '%';
+                
+                if (strength < 50) {
+                    strengthBar.style.background = '#e53e3e';
+                } else if (strength < 75) {
+                    strengthBar.style.background = '#ed8936';
+                } else {
+                    strengthBar.style.background = '#38a169';
+                }
+            }
+            
+            // Валидация сайта
+            websiteInput.addEventListener('blur', function() {
+                const website = websiteInput.value.trim();
+                const errorElement = document.getElementById('website-error');
+                
+                if (website === '') {
+                    hideError(websiteInput, errorElement);
+                    return;
+                }
+                
+                const websiteRegex = /^https:\/\/.+\..+$/;
+                
+                if (!websiteRegex.test(website)) {
+                    showError(websiteInput, errorElement);
+                } else {
+                    hideError(websiteInput, errorElement);
+                }
+            });
+            
+            // Выбор типа медиатеки
+            mediaItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    mediaItems.forEach(i => i.classList.remove('selected'));
+                    this.classList.add('selected');
+                    mediaTypeInput.value = this.getAttribute('data-type');
+                    document.getElementById('media-error').style.display = 'none';
+                });
+            });
+            
+            // Обработка отправки формы
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Валидация всех полей
+                const isEmailValid = !document.getElementById('email-error').style.display === 'block';
+                const isPhoneValid = !document.getElementById('phone-error').style.display === 'block';
+                const isPasswordValid = validatePassword();
+                const isWebsiteValid = !document.getElementById('website-error').style.display === 'block';
+                const isMediaSelected = mediaTypeInput.value !== '';
+                
+                if (!isMediaSelected) {
+                    document.getElementById('media-error').style.display = 'block';
+                } else {
+                    document.getElementById('media-error').style.display = 'none';
+                }
+                
+                if (isEmailValid && isPhoneValid && isPasswordValid && isWebsiteValid && isMediaSelected) {
+                    // В реальном приложении здесь была бы отправка данных на сервер
+                    alert('Регистрация успешно завершена!');
+                    form.reset();
+                    mediaItems.forEach(i => i.classList.remove('selected'));
+                    mediaTypeInput.value = '';
+                    document.getElementById('password-strength-bar').style.width = '0%';
+                    document.querySelectorAll('.requirement').forEach(req => {
+                        req.classList.remove('valid');
+                        req.querySelector('i').textContent = '○';
+                    });
+                } else {
+                    alert('Пожалуйста, исправьте ошибки в форме');
+                }
+            });
+            
+            // Вспомогательные функции
+            function showError(input, errorElement) {
+                input.style.borderColor = '#e53e3e';
+                errorElement.style.display = 'block';
+            }
+            
+            function hideError(input, errorElement) {
+                input.style.borderColor = '#e2e8f0';
+                errorElement.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Медиатека</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .registration-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        .card-header {
+            background: #4a5568;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .card-header h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .card-header p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        .card-body {
+            padding: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2d3748;
+        }
+        
+        .input-wrapper {
+            position: relative;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+        }
+        
+        .input-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #a0aec0;
+        }
+        
+        .error-message {
+            color: #e53e3e;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .success-message {
+            color: #38a169;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .password-strength {
+            height: 4px;
+            background: #e2e8f0;
+            border-radius: 2px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        
+        .password-strength-bar {
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s, background 0.3s;
+        }
+        
+        .password-requirements {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #718096;
+        }
+        
+        .requirement {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .requirement i {
+            margin-right: 8px;
+            font-size: 12px;
+        }
+        
+        .requirement.valid {
+            color: #38a169;
+        }
+        
+        .requirement.valid i {
+            color: #38a169;
+        }
+        
+        .btn {
+            background: #4a5568;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2d3748;
+        }
+        
+        .optional-label {
+            font-size: 12px;
+            color: #718096;
+            margin-left: 5px;
+            font-weight: normal;
+        }
+        
+        .media-library {
+            margin-top: 30px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+        }
+        
+        .media-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .media-item {
+            aspect-ratio: 1;
+            background: #f7fafc;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #a0aec0;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .media-item:hover {
+            background: #edf2f7;
+        }
+        
+        .media-item.selected {
+            border-color: #4299e1;
+            background: #ebf8ff;
+            color: #4299e1;
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #718096;
+        }
+        
+        .login-link a {
+            color: #4299e1;
+            text-decoration: none;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 480px) {
+            .card-body {
+                padding: 20px;
+            }
+            
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="registration-card">
+            <div class="card-header">
+                <h1>Регистрация в Медиатеке</h1>
+                <p>Создайте аккаунт для доступа к коллекции медиа</p>
+            </div>
+            
+            <div class="card-body">
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" placeholder="example@mail.com" required>
+                            <span class="input-icon">✉️</span>
+                        </div>
+                        <div class="error-message" id="email-error">Введите корректный email адрес</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон (RU/BY)</label>
+                        <div class="input-wrapper">
+                            <input type="tel" id="phone" placeholder="+7 (999) 123-45-67" required>
+                            <span class="input-icon">📞</span>
+                        </div>
+                        <div class="error-message" id="phone-error">Введите корректный номер телефона РФ или Беларуси</div>
+                        <div class="success-message" id="phone-success">Номер телефона корректен</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="password" placeholder="Введите пароль" required>
+                            <span class="input-icon">🔒</span>
+                        </div>
+                        <div class="password-strength">
+                            <div class="password-strength-bar" id="password-strength-bar"></div>
+                        </div>
+                        <div class="password-requirements">
+                            <div class="requirement" id="req-length">
+                                <i>○</i> <span>8-64 символов</span>
+                            </div>
+                            <div class="requirement" id="req-space">
+                                <i>○</i> <span>Без пробелов</span>
+                            </div>
+                            <div class="requirement" id="req-special">
+                                <i>○</i> <span>Минимум 1 спецсимвол</span>
+                            </div>
+                        </div>
+                        <div class="error-message" id="password-error">Пароль не соответствует требованиям</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="website">Персональный сайт <span class="optional-label">(опционально)</span></label>
+                        <div class="input-wrapper">
+                            <input type="url" id="website" placeholder="https://example.com">
+                            <span class="input-icon">🌐</span>
+                        </div>
+                        <div class="error-message" id="website-error">Введите корректный HTTPS URL</div>
+                    </div>
+                    
+                    <div class="media-library">
+                        <h3 class="media-title">Выберите тип медиатеки</h3>
+                        <div class="media-grid">
+                            <div class="media-item" data-type="music">🎵</div>
+                            <div class="media-item" data-type="video">🎬</div>
+                            <div class="media-item" data-type="books">📚</div>
+                            <div class="media-item" data-type="photos">🖼️</div>
+                            <div class="media-item" data-type="podcasts">🎙️</div>
+                            <div class="media-item" data-type="art">🎨</div>
+                        </div>
+                        <input type="hidden" id="media-type" value="">
+                        <div class="error-message" id="media-error">Пожалуйста, выберите тип медиатеки</div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Зарегистрироваться</button>
+                    
+                    <div class="login-link">
+                        Уже есть аккаунт? <a href="#">Войти</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registration-form');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const passwordInput = document.getElementById('password');
+            const websiteInput = document.getElementById('website');
+            const mediaItems = document.querySelectorAll('.media-item');
+            const mediaTypeInput = document.getElementById('media-type');
+            
+            // Валидация email
+            emailInput.addEventListener('blur', function() {
+                const email = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const errorElement = document.getElementById('email-error');
+                
+                if (!emailRegex.test(email)) {
+                    showError(emailInput, errorElement);
+                } else {
+                    hideError(emailInput, errorElement);
+                }
+            });
+            
+            // Валидация телефона
+            phoneInput.addEventListener('input', function() {
+                formatPhoneNumber();
+                validatePhone();
+            });
+            
+            phoneInput.addEventListener('blur', validatePhone);
+            
+            function formatPhoneNumber() {
+                let value = phoneInput.value.replace(/\D/g, '');
+                
+                if (value.startsWith('7') || value.startsWith('8')) {
+                    // Российский номер
+                    if (value.length > 1) value = '+7 ' + value.substring(1);
+                    if (value.length > 6) value = value.substring(0, 6) + ' ' + value.substring(6);
+                    if (value.length > 10) value = value.substring(0, 10) + '-' + value.substring(10);
+                    if (value.length > 13) value = value.substring(0, 13) + '-' + value.substring(13);
+                } else if (value.startsWith('375')) {
+                    // Белорусский номер
+                    if (value.length > 3) value = '+375 ' + value.substring(3);
+                    if (value.length > 7) value = value.substring(0, 7) + ' ' + value.substring(7);
+                    if (value.length > 10) value = value.substring(0, 10) + '-' + value.substring(10);
+                    if (value.length > 13) value = value.substring(0, 13) + '-' + value.substring(13);
+                }
+                
+                phoneInput.value = value;
+            }
+            
+            function validatePhone() {
+                const value = phoneInput.value.replace(/\D/g, '');
+                const errorElement = document.getElementById('phone-error');
+                const successElement = document.getElementById('phone-success');
+                
+                // Российские номера: +7, 11 цифр
+                // Белорусские номера: +375, 12 цифр
+                const isValid = 
+                    (value.startsWith('7') && value.length === 11) ||
+                    (value.startsWith('375') && value.length === 12);
+                
+                if (!isValid) {
+                    showError(phoneInput, errorElement);
+                    successElement.style.display = 'none';
+                } else {
+                    hideError(phoneInput, errorElement);
+                    successElement.style.display = 'block';
+                }
+            }
+            
+            // Валидация пароля
+            passwordInput.addEventListener('input', function() {
+                validatePassword();
+                updatePasswordStrength();
+            });
+            
+            function validatePassword() {
+                const password = passwordInput.value;
+                const lengthReq = document.getElementById('req-length');
+                const spaceReq = document.getElementById('req-space');
+                const specialReq = document.getElementById('req-special');
+                const errorElement = document.getElementById('password-error');
+                
+                // Проверка длины
+                const hasValidLength = password.length >= 8 && password.length <= 64;
+                updateRequirement(lengthReq, hasValidLength);
+                
+                // Проверка на пробелы
+                const hasNoSpaces = !/\s/.test(password);
+                updateRequirement(spaceReq, hasNoSpaces);
+                
+                // Проверка на спецсимволы
+                const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+                updateRequirement(specialReq, hasSpecialChar);
+                
+                const isValid = hasValidLength && hasNoSpaces && hasSpecialChar;
+                
+                if (!isValid && password.length > 0) {
+                    errorElement.style.display = 'block';
+                } else {
+                    errorElement.style.display = 'none';
+                }
+                
+                return isValid;
+            }
+            
+            function updateRequirement(element, isValid) {
+                if (isValid) {
+                    element.classList.add('valid');
+                    element.querySelector('i').textContent = '✓';
+                } else {
+                    element.classList.remove('valid');
+                    element.querySelector('i').textContent = '○';
+                }
+            }
+            
+            function updatePasswordStrength() {
+                const password = passwordInput.value;
+                const strengthBar = document.getElementById('password-strength-bar');
+                let strength = 0;
+                
+                if (password.length >= 8) strength += 25;
+                if (password.length >= 12) strength += 25;
+                if (/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) strength += 25;
+                if (/[A-Z]/.test(password) && /[a-z]/.test(password)) strength += 25;
+                
+                strengthBar.style.width = strength + '%';
+                
+                if (strength < 50) {
+                    strengthBar.style.background = '#e53e3e';
+                } else if (strength < 75) {
+                    strengthBar.style.background = '#ed8936';
+                } else {
+                    strengthBar.style.background = '#38a169';
+                }
+            }
+            
+            // Валидация сайта
+            websiteInput.addEventListener('blur', function() {
+                const website = websiteInput.value.trim();
+                const errorElement = document.getElementById('website-error');
+                
+                if (website === '') {
+                    hideError(websiteInput, errorElement);
+                    return;
+                }
+                
+                const websiteRegex = /^https:\/\/.+\..+$/;
+                
+                if (!websiteRegex.test(website)) {
+                    showError(websiteInput, errorElement);
+                } else {
+                    hideError(websiteInput, errorElement);
+                }
+            });
+            
+            // Выбор типа медиатеки
+            mediaItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    mediaItems.forEach(i => i.classList.remove('selected'));
+                    this.classList.add('selected');
+                    mediaTypeInput.value = this.getAttribute('data-type');
+                    document.getElementById('media-error').style.display = 'none';
+                });
+            });
+            
+            // Обработка отправки формы
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Валидация всех полей
+                const isEmailValid = !document.getElementById('email-error').style.display === 'block';
+                const isPhoneValid = !document.getElementById('phone-error').style.display === 'block';
+                const isPasswordValid = validatePassword();
+                const isWebsiteValid = !document.getElementById('website-error').style.display === 'block';
+                const isMediaSelected = mediaTypeInput.value !== '';
+                
+                if (!isMediaSelected) {
+                    document.getElementById('media-error').style.display = 'block';
+                } else {
+                    document.getElementById('media-error').style.display = 'none';
+                }
+                
+                if (isEmailValid && isPhoneValid && isPasswordValid && isWebsiteValid && isMediaSelected) {
+                    // В реальном приложении здесь была бы отправка данных на сервер
+                    alert('Регистрация успешно завершена!');
+                    form.reset();
+                    mediaItems.forEach(i => i.classList.remove('selected'));
+                    mediaTypeInput.value = '';
+                    document.getElementById('password-strength-bar').style.width = '0%';
+                    document.querySelectorAll('.requirement').forEach(req => {
+                        req.classList.remove('valid');
+                        req.querySelector('i').textContent = '○';
+                    });
+                } else {
+                    alert('Пожалуйста, исправьте ошибки в форме');
+                }
+            });
+            
+            // Вспомогательные функции
+            function showError(input, errorElement) {
+                input.style.borderColor = '#e53e3e';
+                errorElement.style.display = 'block';
+            }
+            
+            function hideError(input, errorElement) {
+                input.style.borderColor = '#e2e8f0';
+                errorElement.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+>>>>>>> b0d6da391134a1e4e70ca85af64d11b964cecf3b
+</html>

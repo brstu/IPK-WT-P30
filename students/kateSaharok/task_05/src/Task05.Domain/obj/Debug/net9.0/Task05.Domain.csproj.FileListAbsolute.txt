@@ -1,0 +1,13 @@
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\bin\Debug\net9.0\Task05.Domain.deps.json
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\bin\Debug\net9.0\Task05.Domain.dll
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\bin\Debug\net9.0\Task05.Domain.pdb
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\obj\Debug\net9.0\Task05.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\obj\Debug\net9.0\Task05.Domain.AssemblyInfoInputs.cache
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\obj\Debug\net9.0\Task05.Domain.AssemblyInfo.cs
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\obj\Debug\net9.0\Task05.Domain.csproj.CoreCompileInputs.cache
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\obj\Debug\net9.0\Task05.Domain.sourcelink.json
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\obj\Debug\net9.0\Task05.Domain.dll
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\obj\Debug\net9.0\refint\Task05.Domain.dll
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\obj\Debug\net9.0\Task05.Domain.pdb
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\obj\Debug\net9.0\ref\Task05.Domain.dll
+C:\IPK-WT-P30\students\kateSaharoK\task_05\src\Task05.Domain\obj\Debug\net9.0\Task05.Domain.csproj.AssemblyReference.cache

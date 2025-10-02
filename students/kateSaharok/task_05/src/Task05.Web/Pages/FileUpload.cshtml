@@ -1,0 +1,75 @@
+@page
+@model Task05.Web.Pages.FileUploadModel
+@{
+    ViewData["Title"] = "Загрузка файлов";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="text-center">Загрузка файлов</h1>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h5>Загрузить файл</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="file">Выберите файл (максимум 2 МБ):</label>
+                            <input type="file" class="form-control" id="file" name="UploadedFile" accept=".jpg,.jpeg,.png,.pdf,.txt,.doc,.docx" required>
+                            <small class="form-text text-muted">
+                                Разрешенные типы: JPG, PNG, PDF, TXT, DOC. Максимальный размер: 2 МБ
+                            </small>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Загрузить</button>
+                    </form>
+                    
+                    @if (!string.IsNullOrEmpty(Model.Message))
+                    {
+                        <div class="alert alert-info mt-3">@Model.Message</div>
+                    }
+                    
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <div class="alert alert-danger mt-3">@Model.ErrorMessage</div>
+                    }
+                </div>
+            </div>
+
+            @if (Model.UploadedFiles.Any())
+            {
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h5>Загруженные файлы</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Имя файла</th>
+                                    <th>Размер</th>
+                                    <th>Дата загрузки</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var file in Model.UploadedFiles)
+                                {
+                                    <tr>
+                                        <td>@file.OriginalName</td>
+                                        <td>@file.SizeInKB КБ</td>
+                                        <td>@file.UploadDate.ToString("dd.MM.yyyy HH:mm")</td>
+                                        <td>
+                                            <a href="/FileDownload?fileName=@file.SafeName" class="btn btn-success btn-sm">Скачать</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
