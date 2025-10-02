@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сервис локальных объявлений «Возьму кота на выходные» - найдите пушистого друга для временной заботы">
+    <title>Возьму кота на выходные - Главная</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Перейти к основному содержанию</a>
+    
+    <header class="site-header" role="banner">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                🐱 Возьму кота на выходные
+            </a>
+            
+            <nav class="main-nav" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Главная</a></li>
+                    <li><a href="catalog.html">Все коты</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <button class="theme-toggle" aria-label="Переключить тему">
+                🌙 Тёмная тема
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">Найдите пушистого друга на выходные</h1>
+            <p>Подарите заботу и получите море любви от временного питомца</p>
+            <a href="catalog.html" class="btn mt-2">Смотреть всех котов</a>
+        </section>
+
+        <section class="categories" aria-labelledby="categories-title">
+            <h2 id="categories-title">Категории котов</h2>
+            <div class="categories-grid">
+                <a href="catalog.html?type=calm" class="category-card">
+                    <h3>Спокойные</h3>
+                    <p>Идеальны для тихого отдыха</p>
+                </a>
+                <a href="catalog.html?type=playful" class="category-card">
+                    <h3>Игривые</h3>
+                    <p>Развлекут всю семью</p>
+                </a>
+                <a href="catalog.html?type=affectionate" class="category-card">
+                    <h3>Ласковые</h3>
+                    <p>Любят внимание и заботу</p>
+                </a>
+                <a href="catalog.html?type=independent" class="category-card">
+                    <h3>Самостоятельные</h3>
+                    <p>Не требуют много внимания</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="featured-ads" aria-labelledby="featured-title">
+            <h2 id="featured-title">Популярные коты</h2>
+            <div class="ads-grid">
+
+<article class="ad-card">
+                    <img src="https://via.placeholder.com/400x300/4a6fa5/ffffff?text=Мурзик" 
+                         alt="Рыжий кот Мурзик с зелеными глазами сидит на подоконнике" 
+                         width="400" height="300">
+                    <div class="ad-card-content">
+                        <h3><a href="item.html?id=1">Мурзик</a></h3>
+                        <p class="ad-price">Бесплатно</p>
+                        <p>Дружелюбный рыжий кот, любит играть с мячиком и спать на коленях.</p>
+                        <div class="ad-meta">
+                            <span>📍 Москва</span> • 
+                            <span>🐱 2 года</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ad-card">
+                    <img src="https://via.placeholder.com/400x300/6d987a/ffffff?text=Снежка" 
+                         alt="Белая пушистая кошка Снежка лежит на диване" 
+                         width="400" height="300">
+                    <div class="ad-card-content">
+                        <h3><a href="item.html?id=2">Снежка</a></h3>
+                        <p class="ad-price">Бесплатно</p>
+                        <p>Пушистая белая красавица, очень нежная и аккуратная.</p>
+                        <div class="ad-meta">
+                            <span>📍 Санкт-Петербург</span> • 
+                            <span>🐱 3 года</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-form" aria-labelledby="contact-title">
+            <h2 id="contact-title">Связаться с нами</h2>
+            <form method="post" aria-labelledby="contact-title">
+                <div class="form-group">
+                    <label for="name">Ваше имя *</label>
+                    <input type="text" id="name" name="name" required 
+                           aria-required="true" aria-describedby="name-hint">
+                    <div id="name-hint" class="form-hint">Введите ваше полное имя</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required 
+                           aria-required="true" aria-describedby="email-hint">
+                    <div id="email-hint" class="form-hint">Мы отправим ответ на этот адрес</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Тема сообщения</label>
+                    <select id="subject" name="subject">
+                        <option value="general">Общий вопрос</option>
+                        <option value="support">Техническая поддержка</option>
+                        <option value="partnership">Сотрудничество</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Сообщение *</label>
+                    <textarea id="message" name="message" required 
+                              aria-required="true" aria-describedby="message-hint"></textarea>
+                    <div id="message-hint" class="form-hint">Опишите ваш вопрос подробно</div>
+                </div>
+
+                <button type="submit" class="btn btn-full">Отправить сообщение</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О сервисе</h3>
+                <p>Помогаем котам найти временный дом, а людям - пушистых друзей на выходные.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <address>
+                    <p>Email: <a href="mailto:info@catweekend.ru">info@catweekend.ru</a></p>
+                    <p>Телефон: <a href="tel:+78001234567">8 (800) 123-45-67</a></p>
+                </address>
+
+
+</div>
+            
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <nav aria-label="Дополнительная навигация">
+                    <ul style="list-style: none;">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Все коты</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Возьму кота на выходные. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
+</html>

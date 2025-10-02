@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог котов для временного проживания на выходные">
+    <title>Все коты - Возьму кота на выходные</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Перейти к основному содержанию</a>
+    
+    <header class="site-header" role="banner">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                🐱 Возьму кота на выходные
+            </a>
+            
+            <nav class="main-nav" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html" aria-current="page">Все коты</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <button class="theme-toggle" aria-label="Переключить тему">
+                🌙 Тёмная тема
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <header class="page-header">
+            <h1>Каталог котов</h1>
+            <p>Выберите пушистого друга для временной заботы</p>
+        </header>
+
+        <aside class="filters" aria-labelledby="filters-title">
+            <h2 id="filters-title" class="sr-only">Фильтры поиска</h2>
+            <form class="filter-form">
+                <div class="form-group">
+                    <label for="city">Город</label>
+                    <select id="city" name="city">
+                        <option value="">Все города</option>
+                        <option value="moscow">Москва</option>
+                        <option value="spb">Санкт-Петербург</option>
+                        <option value="ekb">Екатеринбург</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Возраст</label>
+                    <select id="age" name="age">
+                        <option value="">Любой возраст</option>
+                        <option value="kitten">Котёнок (до 1 года)</option>
+                        <option value="young">Молодой (1-3 года)</option>
+                        <option value="adult">Взрослый (4-7 лет)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="temper">Характер</label>
+                    <select id="temper" name="temper">
+                        <option value="">Любой характер</option>
+                        <option value="calm">Спокойный</option>
+                        <option value="playful">Игривый</option>
+                        <option value="affectionate">Ласковый</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-full">Применить фильтры</button>
+            </form>
+        </aside>
+
+        <section class="catalog-results" aria-labelledby="results-title">
+            <h2 id="results-title" class="sr-only">Результаты поиска</h2>
+            
+            <div class="ads-grid">
+                <article class="ad-card">
+
+<img src="https://via.placeholder.com/400x300/4a6fa5/ffffff?text=Мурзик" 
+                         alt="Рыжий кот Мурзик с зелеными глазами" 
+                         width="400" height="300">
+                    <div class="ad-card-content">
+                        <h3><a href="item.html?id=1">Мурзик</a></h3>
+                        <p class="ad-price">Бесплатно</p>
+                        <p>Дружелюбный рыжий кот, любит играть и спать на коленях.</p>
+                        <div class="ad-meta">
+                            <span>📍 Москва</span> • 
+                            <span>🐱 2 года</span> •
+                            <span>😺 Игривый</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ad-card">
+                    <img src="https://via.placeholder.com/400x300/6d987a/ffffff?text=Снежка" 
+                         alt="Белая пушистая кошка Снежка" 
+                         width="400" height="300">
+                    <div class="ad-card-content">
+                        <h3><a href="item.html?id=2">Снежка</a></h3>
+                        <p class="ad-price">Бесплатно</p>
+                        <p>Пушистая белая красавица, очень нежная и аккуратная.</p>
+                        <div class="ad-meta">
+                            <span>📍 Санкт-Петербург</span> • 
+                            <span>🐱 3 года</span> •
+                            <span>😻 Ласковая</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ad-card">
+                    <img src="https://via.placeholder.com/400x300/ff9a76/ffffff?text=Барсик" 
+                         alt="Серый полосатый кот Барсик" 
+                         width="400" height="300">
+                    <div class="ad-card-content">
+                        <h3><a href="item.html?id=3">Барсик</a></h3>
+                        <p class="ad-price">Бесплатно</p>
+                        <p>Серый полосатый исследователь, обожает изучать новые места.</p>
+                        <div class="ad-meta">
+                            <span>📍 Москва</span> • 
+                            <span>🐱 1 год</span> •
+                            <span>🎯 Любопытный</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ad-card">
+                    <img src="https://via.placeholder.com/400x300/9b59b6/ffffff?text=Муся" 
+                         alt="Черно-белая кошка Муся" 
+                         width="400" height="300">
+                    <div class="ad-card-content">
+                        <h3><a href="item.html?id=4">Муся</a></h3>
+                        <p class="ad-price">Бесплатно</p>
+                        <p>Элегантная черно-белая кошка с независимым характером.</p>
+                        <div class="ad-meta">
+                            <span>📍 Екатеринбург</span> • 
+                            <span>🐱 4 года</span> •
+                            <span>😼 Независимая</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <nav class="pagination" aria-label="Навигация по страницам">
+            <ul style="display: flex; gap: 1rem; list-style: none; justify-content: center;">
+                <li><a href="#" aria-current="page" aria-label="Текущая страница 1">1</a></li>
+                <li><a href="#" aria-label="Страница 2">2</a></li>
+                <li><a href="#" aria-label="Страница 3">3</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О сервисе</h3>
+                <p>Помогаем котам найти временный дом, а людям - пушистых друзей на выходные.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <address>
+
+<p>Email: <a href="mailto:info@catweekend.ru">info@catweekend.ru</a></p>
+                    <p>Телефон: <a href="tel:+78001234567">8 (800) 123-45-67</a></p>
+                </address>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <nav aria-label="Дополнительная навигация">
+                    <ul style="list-style: none;">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Все коты</a></li>
+                        <li><a href="index.html#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Возьму кота на выходные. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
+</html>
