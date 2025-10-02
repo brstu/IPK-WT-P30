@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "Мои заказы";
+    var username = ViewData["Username"] as string ?? "Пользователь";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Мои заказы</h1>
+            <p class="lead">Добро пожаловать, @username!</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Создать новый заказ</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="@Url.Action("CreateOrder", "Home")">
+                        <div class="mb-3">
+                            <label for="ProductName" class="form-label">Название товара</label>
+                            <input type="text" class="form-control" id="ProductName" name="ProductName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Quantity" class="form-label">Количество</label>
+                            <input type="number" class="form-control" id="Quantity" name="Quantity" min="1" value="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ShippingAddress" class="form-label">Адрес доставки</label>
+                            <textarea class="form-control" id="ShippingAddress" name="ShippingAddress" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Создать заказ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Информация</h5>
+                </div>
+                <div class="card-body">
+                    <p>Эта страница доступна только авторизованным пользователям.</p>
+                    <p>Здесь вы можете управлять своими заказами и создавать новые.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">На главную</a>
+            <a href="@Url.Action("Logout", "Home")" class="btn btn-outline-danger">Выйти</a>
+        </div>
+    </div>
+</div>

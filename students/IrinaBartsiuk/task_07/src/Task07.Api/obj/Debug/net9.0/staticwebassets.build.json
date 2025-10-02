@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "8BNS3ijGxqeeyVCgnlDV5VbmiZrsIrkqyQ7lZcB+BKo=",
+  "Source": "Task07.Api",
+  "BasePath": "_content/Task07.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

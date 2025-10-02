@@ -1,0 +1,59 @@
+@page
+@model Task05.Web.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">Task05 - Laboratory Work</h1>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-success">
+                        <h4>Application works successfully! ✅</h4>
+                        <p>ASP.NET Core + Identity + Layered Architecture</p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5>Available functions:</h5>
+                        <ul>
+                            <li><a href="/Account/Login">Login</a></li>
+                            <li><a href="/Account/Register">Register</a></li>
+                            <li><a href="/File/Upload">Upload Files</a></li>
+                            <li><a href="/File/Admin">Admin Panel</a></li>
+                        </ul>
+                    </div>
+
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <div class="alert alert-info mt-3">
+                            <h6>You are logged in as: @User.Identity.Name</h6>
+                            <form method="post" asp-page="/Account/Logout" class="mt-2">
+                                <button type="submit" class="btn btn-warning btn-sm">Logout</button>
+                            </form>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-warning mt-3">
+                            <p>You are not logged in. <a href="/Account/Login">Login</a> to access all features.</p>
+                        </div>
+                    }
+
+                    <div class="mt-4">
+                        <h5>Test credentials:</h5>
+                        <div class="alert alert-warning">
+                            <strong>Administrator:</strong><br>
+                            Email: <code>admin@example.com</code><br>
+                            Password: <code>Admin123!</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
