@@ -1,0 +1,32 @@
+@model ElectronicStore.Models.OrderModel
+@{
+    ViewData["Title"] = "Заказ создан";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">Заказ успешно создан!</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-success" role="alert">
+                        <h5>Детали заказа:</h5>
+                        <ul class="mb-0">
+                            <li><strong>Товар:</strong> @Model.ProductName</li>
+                            <li><strong>Количество:</strong> @Model.Quantity</li>
+                            <li><strong>Адрес доставки:</strong> @Model.ShippingAddress</li>
+                        </ul>
+                    </div>
+                    <p>Ваш заказ был успешно создан и передан в обработку.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="@Url.Action("Orders", "Home")" class="btn btn-primary">Создать еще заказ</a>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">На главную</a>
+            </div>
+        </div>
+    </div>
+</div>
