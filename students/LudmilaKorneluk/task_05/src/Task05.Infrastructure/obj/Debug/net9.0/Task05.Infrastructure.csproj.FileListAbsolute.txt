@@ -1,0 +1,5 @@
+C:\Users\WorkHorses\Desktop\project\Task05.Infrastructure\obj\Debug\net9.0\Task05.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\WorkHorses\Desktop\project\Task05.Infrastructure\obj\Debug\net9.0\Task05.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WorkHorses\Desktop\project\Task05.Infrastructure\obj\Debug\net9.0\Task05.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\WorkHorses\Desktop\project\Task05.Infrastructure\obj\Debug\net9.0\Task05.Infrastructure.AssemblyInfo.cs
+C:\Users\WorkHorses\Desktop\project\Task05.Infrastructure\obj\Debug\net9.0\Task05.Infrastructure.csproj.CoreCompileInputs.cache
