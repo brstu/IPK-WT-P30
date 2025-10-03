@@ -1,0 +1,11 @@
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\bin\Debug\net9.0\Task05.Domain.deps.json
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\bin\Debug\net9.0\Task05.Domain.dll
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\bin\Debug\net9.0\Task05.Domain.pdb
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\obj\Debug\net9.0\Task05.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\obj\Debug\net9.0\Task05.Domain.AssemblyInfoInputs.cache
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\obj\Debug\net9.0\Task05.Domain.AssemblyInfo.cs
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\obj\Debug\net9.0\Task05.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\obj\Debug\net9.0\Task05.Domain.dll
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\obj\Debug\net9.0\refint\Task05.Domain.dll
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\obj\Debug\net9.0\Task05.Domain.pdb
+C:\Users\Irinka\Desktop\ЛР_5\Task05\Task05.Domain\obj\Debug\net9.0\ref\Task05.Domain.dll

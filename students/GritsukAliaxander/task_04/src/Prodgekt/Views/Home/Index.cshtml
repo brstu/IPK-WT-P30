@@ -1,0 +1,61 @@
+@model List<ElectronicStore.Models.Product>
+@{
+    ViewData["Title"] = "Главная";
+    var isAuthenticated = ViewData["IsAuthenticated"] as bool? ?? false;
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Добро пожаловать в магазин электроники!</h1>
+            <p class="lead">Лучшие гаджеты и электроника по доступным ценам</p>
+            
+            @if (isAuthenticated)
+            {
+                <div class="alert alert-success" role="alert">
+                    Вы вошли как администратор
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2>Популярные товары</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@product.Category</h6>
+                        <p class="card-text">@product.Description</p>
+                        <p class="card-text"><strong>@product.Price.ToString("C")</strong></p>
+                        <a href="@Url.Action("Details", "Home", new { id = product.Id })" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="@Url.Action("List", "Home")" class="btn btn-outline-primary me-md-2">Все товары</a>
+                @if (isAuthenticated)
+                {
+                    <a href="@Url.Action("Orders", "Home")" class="btn btn-outline-success me-md-2">Мои заказы</a>
+                    <a href="@Url.Action("Logout", "Home")" class="btn btn-outline-danger">Выйти</a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Login", "Home")" class="btn btn-outline-secondary">Войти</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
