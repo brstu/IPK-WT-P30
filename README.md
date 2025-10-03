@@ -35,7 +35,7 @@
 | 4  |  Филонюк Сергей   | [dir](./students/FilonyukSergei/) | ✓   | ✓   |  ✓  |  ✓  |  ✓  | ✓   |  ✓  |  ✓   |    |    |     |     |     |     |     |     |     |         |
 | 5  |  Станислав Шульган   | [dir](./students/ShulhanStanislav/) | ✓   | ✓   |  ✓  |  ✓  |  ✓  | ✓   |  ✓  |  ✓   |    |    |     |     |     |     |     |     |     |         |
 | 6  |  Сергей Терентьев   | [dir](./students/TerentyevSergey) | ✓   | ✓   |  ✓ |  ✓   |  ✓ |  ✓ | ✓ |  ✓   |    |    |     |     |     |     |     |     |     |         |
-| 7  |  Ирина Рождественская   | [dir](./students/TerentyevSergey) | ✓   |  ✓  |  ✓ | ✓  |   |   |  |     |    |    |     |     |     |     |     |     |     |         |
+| 7  |  Ирина Рождественская   | [dir](./students/IraRozhdestvenskaja) | ✓   |  ✓  |  ✓ | ✓  | ✓   | ✓   | ✓  | ✓     |    |    |     |     |     |     |     |     |     |         |
 | 8 |  Грицук Александр   | [dir](./students/TerentyevSergey) | ✓   |  ✓  |  ✓ | ✓  | ✓  | ✓  | ✓ |  ✓   |    |    |     |     |     |     |     |     |     |         |
 | 9 |  Евгений Лапчук  | [dir](./students/YauheniLapchuk) | ✓   |  ✓  |  ✓ | ✓  | ✓  | ✓  | ✓ |  ✓   |    |    |     |     |     |     |     |     |     |         |
 | 10 |  Лидия Шаховец  | [dir](./students/LidyaSkakhovets) | ✓   |  ✓  |  ✓ | ✓  | ✓  | ✓  | ✓ |  ✓   |    |    |     |     |     |     |     |     |     |         |
