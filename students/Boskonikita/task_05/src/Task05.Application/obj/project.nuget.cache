@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gk6tkNBiIrg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Irinka\\Desktop\\ЛР_5\\Task05\\Task05.Application\\Task05.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Irinka\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.9\\microsoft.extensions.dependencyinjection.abstractions.9.0.9.nupkg.sha512",
+    "C:\\Users\\Irinka\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.9\\microsoft.extensions.logging.abstractions.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
