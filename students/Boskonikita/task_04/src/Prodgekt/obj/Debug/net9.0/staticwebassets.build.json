@@ -1,0 +1,362 @@
+{
+  "Version": 1,
+  "Hash": "1ySft9jYpt1JBMxnFedU4nfzSQ44i/cudgkBF8SOAWQ=",
+  "Source": "ElectronicStore",
+  "BasePath": "_content/ElectronicStore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ElectronicStore\\wwwroot",
+      "Source": "ElectronicStore",
+      "ContentRoot": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\wwwroot\\",
+      "BasePath": "_content/ElectronicStore",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\obj\\Debug\\net9.0\\compressed\\6p98m7dlas-au5joa8abu.gz",
+      "SourceId": "ElectronicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ElectronicStore",
+      "RelativePath": "css/site#[.{fingerprint=au5joa8abu}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\wwwroot\\css\\site.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "qldu7pp1qq",
+      "Integrity": "XttbpwoGHxdI7EVQdVJfBUJHGTKApmecOi4ue7JTRd4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\wwwroot\\css\\site.css",
+      "SourceId": "ElectronicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\wwwroot\\",
+      "BasePath": "_content/ElectronicStore",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "au5joa8abu",
+      "Integrity": "UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.au5joa8abu.css",
+      "AssetFile": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\obj\\Debug\\net9.0\\compressed\\6p98m7dlas-au5joa8abu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.005128205128"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XttbpwoGHxdI7EVQdVJfBUJHGTKApmecOi4ue7JTRd4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 28 Sep 2025 08:46:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "au5joa8abu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.au5joa8abu.css",
+      "AssetFile": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "271"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 28 Sep 2025 08:46:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "au5joa8abu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.au5joa8abu.css.gz",
+      "AssetFile": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\obj\\Debug\\net9.0\\compressed\\6p98m7dlas-au5joa8abu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XttbpwoGHxdI7EVQdVJfBUJHGTKApmecOi4ue7JTRd4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 28 Sep 2025 08:46:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "au5joa8abu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XttbpwoGHxdI7EVQdVJfBUJHGTKApmecOi4ue7JTRd4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\obj\\Debug\\net9.0\\compressed\\6p98m7dlas-au5joa8abu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.005128205128"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XttbpwoGHxdI7EVQdVJfBUJHGTKApmecOi4ue7JTRd4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 28 Sep 2025 08:46:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "271"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 28 Sep 2025 08:46:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "C:\\Users\\Irinka\\Desktop\\ЛР_04\\src\\Prodgekt\\obj\\Debug\\net9.0\\compressed\\6p98m7dlas-au5joa8abu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XttbpwoGHxdI7EVQdVJfBUJHGTKApmecOi4ue7JTRd4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 28 Sep 2025 08:46:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XttbpwoGHxdI7EVQdVJfBUJHGTKApmecOi4ue7JTRd4="
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "EW2MbwnlQMxfiA18650R5FOeoCVX+89HHcS3paoPeHM=",
+  "Source": "ElectronicStore",
+  "BasePath": "_content/ElectronicStore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ElectronicStore\\wwwroot",
+      "Source": "ElectronicStore",
+      "ContentRoot": "C:\\Users\\Irinka\\Desktop\\Prodgekt\\wwwroot\\",
+      "BasePath": "_content/ElectronicStore",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Irinka\\Desktop\\Prodgekt\\wwwroot\\css\\site.css",
+      "SourceId": "ElectronicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Irinka\\Desktop\\Prodgekt\\wwwroot\\",
+      "BasePath": "_content/ElectronicStore",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "au5joa8abu",
+      "Integrity": "UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.au5joa8abu.css",
+      "AssetFile": "C:\\Users\\Irinka\\Desktop\\Prodgekt\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "271"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 28 Sep 2025 08:46:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "au5joa8abu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\Irinka\\Desktop\\Prodgekt\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "271"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 28 Sep 2025 08:46:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UiQJYBcCmzxORXcNR9tS/p1OQ9NssSnh4ucbeYZ3ppE="
+        }
+      ]
+    }
+  ]
+}
