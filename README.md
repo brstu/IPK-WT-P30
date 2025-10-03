@@ -41,6 +41,7 @@
 | 10 |  Лидия Шаховец  | [dir](./students/LidyaSkakhovets) | ✓   |  ✓  |  ✓ | ✓  | ✓  | ✓  | ✓ |  ✓   |    |    |     |     |     |     |     |     |     |         |
 | 11 |  Людмила Корнелюк | [dir](./students/LudmilaKorneluk) | ✓   |  ✓  |  ✓ | ✓  | ✓  | ✓  | ✓ |  ✓   |    |    |     |     |     |     |     |     |     |         |
 | 11 |  Алексей Мелянюк | [dir](./students/AlexeyMelianiuk) | ✓   |  ✓  |  ✓ | ✓  | ✓  | ✓  | ✓ |  ✓   |    |    |     |     |     |     |     |     |     |         |
+| 11 |  Никита Боско | [dir](./students/Boskonikita) | ✓   |  ✓  |  ✓ | ✓  | ✓  | ✓  | ✓ |  ✓   |    |    |     |     |     |     |     |     |     |         |
 | 99 | Тестов Тест Тестович | [students/your_id](./students/your_id/) | ✓  |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |     |         |
 
 <!-- Table styles for GitHub Pages/Docs; ignored in GitHub README rendering -->
