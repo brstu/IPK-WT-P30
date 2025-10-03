@@ -1,0 +1,24 @@
+@page "{id:int}"
+@model Task04.Web.Pages.Items.DetailsModel
+@{
+    ViewData["Title"] = $"Элемент {Model.Item?.Id}";
+}
+
+@if (Model.Item != null)
+{
+    <h2>@Model.Item.Name</h2>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">ID: @Model.Item.Id</h5>
+            <p class="card-text">@Model.Item.Description</p>
+            <a href="/items" class="btn btn-secondary">Назад к списку</a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning">
+        Элемент не найден.
+    </div>
+    <a href="/items" class="btn btn-secondary">Назад к списку</a>
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Мурзик - дружелюбный рыжий кот для временной заботы">
+    <title>Мурзик - Возьму кота на выходные</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Перейти к основному содержанию</a>
+    
+    <header class="site-header" role="banner">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                🐱 Возьму кота на выходные
+            </a>
+            
+            <nav class="main-nav" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Все коты</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <button class="theme-toggle" aria-label="Переключить тему">
+                🌙 Тёмная тема
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <article class="item-detail">
+            <header class="item-header">
+                <nav aria-label="Хлебные крошки">
+                    <a href="index.html">Главная</a> &gt; 
+                    <a href="catalog.html">Все коты</a> &gt; 
+                    <span>Мурзик</span>
+                </nav>
+                
+                <h1>Мурзик</h1>
+                <div class="item-meta">
+                    <span class="ad-price">Бесплатно</span>
+                    <span>📍 Москва</span>
+                    <span>🐱 2 года</span>
+                    <span>😺 Игривый</span>
+                </div>
+            </header>
+
+            <section class="gallery" aria-labelledby="gallery-title">
+                <h2 id="gallery-title" class="sr-only">Фотографии кота</h2>
+                <div class="gallery">
+                    <img src="https://via.placeholder.com/600x400/4a6fa5/ffffff?text=Мурзик+1" 
+                         alt="Мурзик играет с мячиком в гостиной" 
+                         width="600" height="400">
+                    <img src="https://via.placeholder.com/600x400/6d987a/ffffff?text=Мурзик+2" 
+                         alt="Мурзик спит на диване, свернувшись клубочком" 
+                         width="600" height="400">
+                    <img src="https://via.placeholder.com/600x400/ff9a76/ffffff?text=Мурзик+3" 
+                         alt="Мурзик смотрит в окно на птиц" 
+                         width="600" height="400">
+                </div>
+            </section>
+
+            <section class="item-description" aria-labelledby="description-title">
+                <h2 id="description-title">Описание</h2>
+                <p>Мурзик - очень дружелюбный и игривый рыжий кот. Он обожает внимание и всегда готов составить компанию для игр или спокойного отдыха.</p>
+                
+                <h3>Особенности характера:</h3>
+                <ul>
+
+<li>Очень общительный и ласковый</li>
+                    <li>Любит играть с мячиком и перьевыми игрушками</li>
+                    <li>Приучен к лотку и когтеточке</li>
+                    <li>Хорошо ладит с детьми</li>
+                    <li>Нейтрально относится к другим животным</li>
+                </ul>
+
+                <h3>Что включено:</h3>
+                <ul>
+                    <li>Переноска для кота</li>
+                    <li>Запас корма на несколько дней</li>
+                    <li>Любимые игрушки</li>
+                    <li>Инструкция по уходу</li>
+                </ul>
+            </section>
+
+            <aside class="owner-info" aria-labelledby="owner-title">
+                <h2 id="owner-title">Информация о владельце</h2>
+                <div class="owner-details">
+                    <p><strong>Мария</strong></p>
+                    <p>Опытный владелец кошек с 5-летним стажем</p>
+                    <p>📞 <a href="tel:+79161234567">+7 (916) 123-45-67</a></p>
+                    <p>✉️ <a href="mailto:maria@example.com">maria@example.com</a></p>
+                </div>
+            </aside>
+
+            <section class="contact-owner" aria-labelledby="contact-owner-title">
+                <h2 id="contact-owner-title">Забрать кота на выходные</h2>
+                <form class="contact-form" method="post">
+                    <div class="form-group">
+                        <label for="contact-name">Ваше имя *</label>
+                        <input type="text" id="contact-name" name="contact-name" required 
+                               aria-required="true" aria-describedby="contact-name-hint">
+                        <div id="contact-name-hint" class="form-hint">Как к вам обращаться?</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-phone">Телефон *</label>
+                        <input type="tel" id="contact-phone" name="contact-phone" required 
+                               pattern="[\+]\d{1,3}\s?[\(]?\d{3}[\)]?\s?\d{3}[\-]?\d{2}[\-]?\d{2}" 
+                               aria-required="true" aria-describedby="contact-phone-hint">
+                        <div id="contact-phone-hint" class="form-hint">Формат: +7 123 456-78-90</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-dates">Даты *</label>
+                        <input type="text" id="contact-dates" name="contact-dates" required 
+                               aria-required="true" aria-describedby="contact-dates-hint"
+                               placeholder="Например: 15-17 декабря">
+                        <div id="contact-dates-hint" class="form-hint">Укажите желаемые даты</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-experience">Опыт с котами</label>
+                        <select id="contact-experience" name="contact-experience">
+                            <option value="">Выберите вариант</option>
+                            <option value="none">Нет опыта</option>
+                            <option value="some">Был небольшой опыт</option>
+                            <option value="lots">Много опыта с котами</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">Дополнительная информация</label>
+                        <textarea id="contact-message" name="contact-message" 
+                                  aria-describedby="contact-message-hint"></textarea>
+                        <div id="contact-message-hint" class="form-hint">
+                            Расскажите о ваших условиях, других животных дома и т.д.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-full">Отправить заявку</button>
+                </form>
+            </section>
+        </article>
+    </main>
+
+<footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О сервисе</h3>
+                <p>Помогаем котам найти временный дом, а людям - пушистых друзей на выходные.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <address>
+                    <p>Email: <a href="mailto:info@catweekend.ru">info@catweekend.ru</a></p>
+                    <p>Телефон: <a href="tel:+78001234567">8 (800) 123-45-67</a></p>
+                </address>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <nav aria-label="Дополнительная навигация">
+                    <ul style="list-style: none;">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Все коты</a></li>
+                        <li><a href="index.html#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Возьму кота на выходные. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body { 
+    font-family: system-ui, sans-serif; 
+    margin: 16px; 
+}
+
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    margin: 12px 0; 
+}
+
+th, td { 
+    border: 1px solid #ddd; 
+    padding: 8px; 
+}
+
+th { 
+    background: #f5f5f5; 
+    text-align: left; 
+}
+
+.pager { 
+    display: flex; 
+    gap: 8px; 
+    align-items: center; 
+}
+
+#status { 
+    margin: 8px 0; 
+    color: #444; 
+}
+
+/* Стили для состояния загрузки */
+.loading {
+    color: #0066cc;
+}
+
+/* Стили для ошибки */
+.error {
+    color: crimson;
+}
+
+/* Стили для успешной загрузки */
+.success {
+    color: #2e8b57;
+}

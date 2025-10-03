@@ -1,0 +1,26 @@
+@page
+@model Task04.Web.Pages.IndexModel
+@{
+    ViewData["Title"] = "Главная страница";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Добро пожаловать</h1>
+    <p>Это главная страница приложения Task04.</p>
+    
+    @if (Model.IsAuthenticated)
+    {
+        <div class="alert alert-success">
+            Вы вошли в систему!
+        </div>
+        <form method="post" asp-page-handler="Logout">
+            <button type="submit" class="btn btn-warning">Выйти</button>
+        </form>
+    }
+    else
+    {
+        <a href="/Login" class="btn btn-primary">Войти</a>
+    }
+    
+    <a href="/Items" class="btn btn-secondary">Список элементов</a>
+</div>

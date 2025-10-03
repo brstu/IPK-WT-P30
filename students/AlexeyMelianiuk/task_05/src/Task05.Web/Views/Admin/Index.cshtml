@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Админ-панель";
+}
+
+<h1>Админ-панель</h1>
+
+<div class="alert alert-success">
+    <h4>Вы вошли с ролью Administrator</h4>
+    <p>Эта страница доступна только пользователям с ролью Admin.</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Управление пользователями</h5>
+            </div>
+            <div class="card-body">
+                <p>Просмотр и управление пользователями системы</p>
+                <a href="@Url.Action("Users", "Admin")" class="btn btn-primary">Управление пользователями</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Загрузка файлов</h5>
+            </div>
+            <div class="card-body">
+                <p>Доступ к системе загрузки файлов</p>
+                <a href="@Url.Action("Upload", "File")" class="btn btn-primary">Загрузка файлов</a>
+            </div>
+        </div>
+    </div>
+</div>
