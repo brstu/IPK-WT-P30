@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналитика - Центр рассылок «Не спам, а ценность»</title>
+    <meta name="description" content="Статистика и аналитика email-кампаний, отслеживание эффективности рассылок">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="Основная навигация">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <h1>«Не спам, а ценность»</h1>
+                </a>
+                <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="campaigns.html">Кампании</a></li>
+                    <li><a href="analytics.html" aria-current="page">Аналитика</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title">Аналитика кампаний</h1>
+                <p>Отслеживайте эффективность ваших рассылок</p>
+            </div>
+        </section>
+
+        <section class="analytics-overview" aria-labelledby="overview-title">
+            <div class="container">
+                <h2 id="overview-title" class="visually-hidden">Обзор статистики</h2>
+                <div class="stats-grid">
+                    <div class="stat-card" role="region" aria-labelledby="stat-delivered">
+                        <h3 id="stat-delivered">Доставлено</h3>
+                        <p class="stat-number">94.2%</p>
+                        <p class="stat-desc">от всех отправленных писем</p>
+                    </div>
+                    <div class="stat-card" role="region" aria-labelledby="stat-opens">
+                        <h3 id="stat-opens">Открытия</h3>
+                        <p class="stat-number">28.7%</p>
+                        <p class="stat-desc">средний показатель по кампаниям</p>
+                    </div>
+                    <div class="stat-card" role="region" aria-labelledby="stat-clicks">
+                        <h3 id="stat-clicks">Клики</h3>
+                        <p class="stat-number">4.3%</p>
+                        <p class="stat-desc">от всех доставленных писем</p>
+                    </div>
+                    <div class="stat-card" role="region" aria-labelledby="stat-unsubs">
+                        <h3 id="stat-unsubs">Отписки</h3>
+                        <p class="stat-number">0.2%</p>
+                        <p class="stat-desc">ниже среднего по рынку</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="campaign-performance" aria-labelledby="performance-title">
+            <div class="container">
+                <h2 id="performance-title">Эффективность кампаний</h2>
+                <div class="performance-table" role="region" aria-labelledby="performance-title">
+                    <table>
+                        <caption class="visually-hidden">Статистика по кампаниям за последний месяц</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Кампания</th>
+                                <th scope="col">Отправлено</th>
+                                <th scope="col">Открытия</th>
+                                <th scope="col">Клики</th>
+                                <th scope="col">Конверсии</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Новогодняя акция</th>
+                                <td>15,247</td>
+                                <td>34.5%</td>
+                                <td>5.2%</td>
+                                <td>2.1%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Welcome серия</th>
+                                <td>8,451</td>
+                                <td>42.1%</td>
+                                <td>8.7%</td>
+                                <td>3.4%</td>
+                            </tr>
+                            <!-- Добавьте больше строк по необходимости -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Центр рассылок «Не спам, а ценность». Все права защищены.</p>
+            <address>
+                Контакты: <a href="mailto:info@nespam.ru">info@nespam.ru</a>
+            </address>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Введите ваш email"
+                    required
+                >
+                <div id="emailError" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Придумайте пароль"
+                    required
+                >
+                <div id="passwordError" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон (RU/BY)</label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="+7 XXX XXX XX XX"
+                    required
+                >
+                <div id="phoneError" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="libraryCard">Номер читательского билета</label>
+                <input 
+                    type="text" 
+                    id="libraryCard" 
+                    name="libraryCard" 
+                    placeholder="LC‑2025‑XXXXX"
+                    required
+                >
+                <div id="libraryCardError" class="error-message"></div>
+            </div>
+
+            <button type="submit" id="submitBtn" class="submit-btn">
+                Зарегистрироваться
+            </button>
+        </form>
+        
+        <div class="form-note">
+            Формат читательского билета: LC‑2025‑XXXXX (5 цифр)
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
