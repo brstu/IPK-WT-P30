@@ -1,0 +1,33 @@
+@page "{id:int}"
+@model ExpensesDetailsModel
+@{
+    ViewData["Title"] = "Детали расхода";
+}
+
+<div class="container mt-5">
+    @if (Model.Expense != null)
+    {
+        <h1>Детали расхода: @Model.Expense.Title</h1>
+        
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Expense.Title</h5>
+                <p class="card-text"><strong>Сумма:</strong> @Model.Expense.Amount.ToString("C")</p>
+                <p class="card-text"><strong>Категория:</strong> @Model.Expense.Category</p>
+                <p class="card-text"><strong>Дата:</strong> @Model.Expense.Date.ToString("dd.MM.yyyy")</p>
+                <p class="card-text"><strong>Описание:</strong> @Model.Expense.Description</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            Расход не найден!
+        </div>
+    }
+    
+    <div class="mt-3">
+        <a href="/Expenses" class="btn btn-secondary">Назад к списку</a>
+        <a href="/" class="btn btn-primary">На главную</a>
+    </div>
+</div>
