@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь - Платформа «Сдам всё»</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Перейти к основному содержанию</a>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="На главную страницу">
+                    <img src="img/logo.jpg" alt="Логотип Сдам всё" width="120" height="120">
+                </a>
+            </div>
+            <nav class="nav" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="list.html">Каталог курсов</a></li>
+                    <li><a href="contact.html" aria-current="page">Обратная связь</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Переключить тему">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <header class="page-header">
+                <h1>Обратная связь</h1>
+                <p>Мы всегда рады вашим вопросам и предложениям</p>
+            </header>
+
+            <div class="contact-layout">
+                <section class="contact-info">
+                    <h2>Контактная информация</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h3>Электронная почта</h3>
+                            <p><a href="mailto:info@sdamvse.ru">info@sdamvse.ru</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Время ответа</h3>
+                            <p>Обычно мы отвечаем в течение 24 часов</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Часто задаваемые вопросы</h3>
+                            <p>Перед обращением ознакомьтесь с <a href="#">разделом FAQ</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="contact-form-section">
+                    <h2>Форма обратной связи</h2>
+                    <form class="contact-form" id="feedback-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Имя <span class="required" aria-hidden="true">*</span></label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required 
+                                aria-required="true"
+                                aria-describedby="name-help"
+                                minlength="2"
+                                maxlength="50">
+                            <small id="name-help">Введите ваше полное имя</small>
+                            <span class="error-message" id="name-error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                aria-required="true"
+                                aria-describedby="email-help">
+                            <small id="email-help">Мы не передаём ваш email третьим лицам</small>
+                            <span class="error-message" id="email-error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="topic">Тема обращения <span class="required" aria-hidden="true">*</span></label>
+                            <select 
+                                id="topic" 
+                                name="topic" 
+                                required 
+                                aria-required="true"
+                                aria-describedby="topic-help">
+                                <option value="">Выберите тему</option>
+                                <option value="technical">Техническая проблема</option>
+                                <option value="content">Вопрос по содержанию курсов</option>
+                                <option value="payment">Оплата и подписки</option>
+                                <option value="suggestion">Предложение по улучшению</option>
+                                <option value="other">Другое</option>
+                            </select>
+                            <small id="topic-help">Выберите наиболее подходящую категорию</small>
+                            <span class="error-message" id="topic-error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Сообщение <span class="required" aria-hidden="true">*</span></label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="6" 
+                                required 
+                                aria-required="true"
+                                aria-describedby="message-help"
+                                minlength="10"
+                                maxlength="1000"
+                                placeholder="Опишите вашу проблему или вопрос подробно..."></textarea>
+                            <small id="message-help">Минимум 10 символов, максимум 1000</small>
+                            <span class="error-message" id="message-error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input 
+                                    type="checkbox" 
+                                    id="consent" 
+                                    name="consent" 
+                                    required 
+                                    aria-required="true">
+                                <label for="consent">
+                                    Я соглашаюсь с обработкой моих персональных данных в соответствии с 
+                                    <a href="#" target="_blank">политикой конфиденциальности</a>
+                                    <span class="required" aria-hidden="true">*</span>
+                                </label>
+                            </div>
+                            <span class="error-message" id="consent-error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                            <button type="reset" class="btn btn-secondary">Очистить форму</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Платформа «Сдам всё»</h3>
+                    <p>Образовательная платформа для быстрого освоения новых навыков</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="list.html">Каталог курсов</a></li>
+                        <li><a href="contact.html">Обратная связь</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <address>
+                        <p>Email: <a href="mailto:info@sdamvse.ru">info@sdamvse.ru</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Платформа мини-курсов «Сдам всё». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

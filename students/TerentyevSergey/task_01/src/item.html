@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS: семантика, адаптивность и доступность - Платформа «Сдам всё»</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Перейти к основному содержанию</a>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="На главную страницу">
+                    <img src="img/logo.jpg" alt="Логотип Сдам всё" width="120" height="120">
+                </a>
+            </div>
+            <nav class="nav" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="list.html">Каталог курсов</a></li>
+                    <li><a href="contact.html">Обратная связь</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Переключить тему">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Хлебные крошки">
+                <ol>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="list.html">Каталог курсов</a></li>
+                    <li><a href="list.html">Программирование</a></li>
+                    <li aria-current="page">HTML/CSS: семантика, адаптивность и доступность</li>
+                </ol>
+            </nav>
+
+            <article class="lesson-detail">
+                <header class="lesson-header">
+                    <h1>HTML/CSS: семантика, адаптивность и доступность</h1>
+                    <div class="lesson-meta">
+                        <div class="course-level">
+                            <span class="level-badge level-beginner">Начальный</span>
+                        </div>
+                        <div class="lesson-duration">
+                            <span>Урок 1 из 10</span>
+                        </div>
+                        <div class="lesson-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 10%"></div>
+                            </div>
+                            <span class="progress-text">10% завершено</span>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="lesson-content">
+                    <h2>Содержание урока</h2>
+                    
+                    <section class="lesson-section">
+                        <h3>Введение в семантическую разметку</h3>
+                        <p>Семантическая разметка помогает поисковым системам и вспомогательным технологиям понимать структуру и содержание вашей веб-страницы.</p>
+                        
+                        <figure>
+                            <img src="img/course-1.jpg" alt="Пример семантической разметки HTML5" class="lesson-image">
+                            <figcaption>Пример правильной семантической разметки страницы</figcaption>
+                        </figure>
+                        
+                        <h4>Основные семантические теги:</h4>
+                        <ul>
+                            <li><code>&lt;header&gt;</code> - шапка сайта или раздела</li>
+                            <li><code>&lt;nav&gt;</code> - навигационное меню</li>
+                            <li><code>&lt;main&gt;</code> - основное содержимое страницы</li>
+                            <li><code>&lt;article&gt;</code> - самостоятельный контент</li>
+                            <li><code>&lt;section&gt;</code> - тематическая группа контента</li>
+                            <li><code>&lt;aside&gt;</code> - дополнительный, связанный контент</li>
+                            <li><code>&lt;footer&gt;</code> - подвал сайта или раздела</li>
+                        </ul>
+                    </section>
+
+                    <section class="lesson-section">
+                        <h3>Адаптивный дизайн</h3>
+                        <p>Адаптивный дизайн обеспечивает корректное отображение сайта на устройствах с разными размерами экранов.</p>
+                        
+                        <h4>Подход Mobile First:</h4>
+                        <ol>
+                            <li>Сначала проектируем для мобильных устройств</li>
+                            <li>Используем медиа-запросы для адаптации к большим экранам</li>
+                            <li>Применяем относительные единицы измерения</li>
+                            <li>Оптимизируем изображения для разных разрешений</li>
+                        </ol>
+                    </section>
+
+                    <section class="lesson-section">
+                        <h3>Доступность (a11y)</h3>
+                        <p>Доступность обеспечивает возможность использования сайта людьми с ограниченными возможностями.</p>
+                        
+                        <h4>Ключевые принципы доступности:</h4>
+                        <ul>
+                            <li>Семантическая разметка</li>
+                            <li>Альтернативные тексты для изображений</li>
+                            <li>Достаточный цветовой контраст</li>
+                            <li>Клавиатурная навигация</li>
+                            <li>ARIA-атрибуты при необходимости</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section class="lesson-materials">
+                    <h2>Материалы урока</h2>
+                    <div class="materials-grid">
+                        <div class="material-card">
+                            <h3>Презентация</h3>
+                            <p>PDF-файл с основными концепциями урока</p>
+                            <a href="#" class="btn btn-secondary" download>Скачать (2.1 MB)</a>
+                        </div>
+                        <div class="material-card">
+                            <h3>Примеры кода</h3>
+                            <p>Архив с рабочими примерами из урока</p>
+                            <a href="#" class="btn btn-secondary" download>Скачать (1.5 MB)</a>
+                        </div>
+                        <div class="material-card">
+                            <h3>Чек-лист</h3>
+                            <p>Контрольный список для проверки своей работы</p>
+                            <a href="#" class="btn btn-secondary" download>Скачать (0.8 MB)</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="lesson-navigation">
+                    <h2 class="visually-hidden">Навигация по урокам</h2>
+                    <div class="nav-buttons">
+                        <a href="#" class="btn btn-secondary" aria-disabled="true">Предыдущий урок</a>
+                        <a href="#" class="btn btn-primary">Следующий урок</a>
+                    </div>
+                </section>
+            </article>
+
+            <aside class="related-courses">
+                <h2>Рекомендуемые курсы</h2>
+                <div class="courses-grid">
+                    <article class="course-card">
+                        <img src="img/course-2.jpg" alt="Программист пишет код" class="course-image">
+                        <div class="course-content">
+                            <h3>JavaScript основы</h3>
+                            <p>Изучите базовые концепции программирования на JavaScript</p>
+                            <div class="course-level">
+                                <span class="level-badge level-intermediate">Средний</span>
+                            </div>
+                            <a href="item.html" class="btn btn-secondary">Подробнее</a>
+                        </div>
+                    </article>
+                    
+                    <article class="course-card">
+                        <img src="img/course-3.jpg" alt="Дизайнер создает макет" class="course-image">
+                        <div class="course-content">
+                            <h3>UI/UX дизайн</h3>
+                            <p>Создавайте удобные и красивые интерфейсы</p>
+                            <div class="course-level">
+                                <span class="level-badge level-advanced">Продвинутый</span>
+                            </div>
+                            <a href="item.html" class="btn btn-secondary">Подробнее</a>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Платформа «Сдам всё»</h3>
+                    <p>Образовательная платформа для быстрого освоения новых навыков</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="list.html">Каталог курсов</a></li>
+                        <li><a href="contact.html">Обратная связь</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <address>
+                        <p>Email: <a href="mailto:info@sdamvse.ru">info@sdamvse.ru</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Платформа мини-курсов «Сдам всё». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

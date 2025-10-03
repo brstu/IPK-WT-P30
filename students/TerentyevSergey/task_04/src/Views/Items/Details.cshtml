@@ -1,0 +1,16 @@
+@model Task04.Web.Models.Item
+@{
+    ViewData["Title"] = $"Товар {Model.Name}";
+}
+
+<h2>@Model.Name</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Description</p>
+        <p class="card-text"><strong>Цена:</strong> @Model.Price.ToString("C")</p>
+        <p class="card-text"><strong>ID:</strong> @Model.Id</p>
+        <a href="@Url.Action("Index")" class="btn btn-primary">Назад к списку</a>
+    </div>
+</div>

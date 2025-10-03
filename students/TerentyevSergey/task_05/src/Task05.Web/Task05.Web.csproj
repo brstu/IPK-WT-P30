@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Task05.Application\Task05.Application.csproj" />
+    <ProjectReference Include="..\Task05.Infrastructure\Task05.Infrastructure.csproj" />
+    <ProjectReference Include="..\Task05.Domain\Task05.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>
