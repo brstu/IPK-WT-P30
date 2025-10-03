@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Diagnostics";
+}
+
+<h2>Application Diagnostics</h2>
+
+<pre>@System.Text.Json.JsonSerializer.Serialize(ViewBag.Diagnostics, new System.Text.Json.JsonSerializerOptions { WriteIndented = true })</pre>
+
+<h3>Test Links:</h3>
+<ul>
+    <li><a href="/File/Upload">/File/Upload</a></li>
+    <li><a href="/File/Admin">/File/Admin</a></li>
+    <li><a href="/Account/Login">/Account/Login</a></li>
+    <li><a href="/Account/Register">/Account/Register</a></li>
+</ul>
