@@ -1,0 +1,16 @@
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\bin\Debug\net9.0\Task07.Infrastructure.deps.json
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\bin\Debug\net9.0\Task07.Infrastructure.dll
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\bin\Debug\net9.0\Task07.Infrastructure.pdb
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\bin\Debug\net9.0\Task07.Core.dll
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\bin\Debug\net9.0\Task07.Core.pdb
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\Task07.Infrastructure.csproj.AssemblyReference.cache
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\Task07.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\Task07.Infrastructure.AssemblyInfoInputs.cache
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\Task07.Infrastructure.AssemblyInfo.cs
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\Task07.Infrastructure.csproj.CoreCompileInputs.cache
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\Task07.Infrastructure.sourcelink.json
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\Task07.I.37B42817.Up2Date
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\Task07.Infrastructure.dll
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\refint\Task07.Infrastructure.dll
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\Task07.Infrastructure.pdb
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Infrastructure\obj\Debug\net9.0\ref\Task07.Infrastructure.dll
