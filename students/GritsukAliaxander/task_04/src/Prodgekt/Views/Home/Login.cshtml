@@ -1,0 +1,45 @@
+@model ElectronicStore.Models.LoginModel
+@{
+    ViewData["Title"] = "Вход в систему";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">Вход в систему</h4>
+                </div>
+                <div class="card-body">
+                    @if (ViewData["ErrorMessage"] != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="Username" class="form-label">Имя пользователя</label>
+                            <input type="text" class="form-control" id="Username" name="Username" value="@Model.Username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Password" class="form-label">Пароль</label>
+                            <input type="password" class="form-control" id="Password" name="Password" required>
+                        </div>
+                        <div class="mb-3">
+                            <small class="text-muted">
+                                Тестовые данные: admin / password
+                            </small>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Войти</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">На главную</a>
+            </div>
+        </div>
+    </div>
+</div>

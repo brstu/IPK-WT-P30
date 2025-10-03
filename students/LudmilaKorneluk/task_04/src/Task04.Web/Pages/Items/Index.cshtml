@@ -1,0 +1,42 @@
+@page
+@model Task04.Web.Pages.Items.IndexModel
+@{
+    ViewData["Title"] = "Список элементов";
+}
+
+<div class="container mt-5">
+    <h1>Список элементов</h1>
+    
+    <div class="list-group mt-4">
+        @foreach (var item in Model.Items)
+        {
+            <a href="/items/@item.Id" class="list-group-item list-group-item-action">
+                Элемент #@item.Id - @item.Name
+            </a>
+        }
+    </div>
+
+    <div class="mt-4">
+        <h3>Привязка модели</h3>
+        <form method="get" class="row g-3">
+            <div class="col-md-4">
+                <input type="text" name="search" class="form-control" placeholder="Поиск..." value="@Model.Search">
+            </div>
+            <div class="col-md-2">
+                <input type="number" name="count" class="form-control" placeholder="Количество" value="@Model.Count">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary">Фильтровать</button>
+            </div>
+        </form>
+
+        @if (!string.IsNullOrEmpty(Model.Search) || Model.Count > 0)
+        {
+            <div class="alert alert-info mt-3">
+                Параметры запроса: 
+                Search = '@Model.Search', 
+                Count = @Model.Count
+            </div>
+        }
+    </div>
+</div>

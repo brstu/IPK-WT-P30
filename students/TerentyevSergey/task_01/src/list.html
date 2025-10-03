@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог курсов - Платформа «Сдам всё»</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Перейти к основному содержанию</a>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="На главную страницу">
+                    <img src="img/logo.jpg" alt="Логотип Сдам всё" width="120" height="120">
+                </a>
+            </div>
+            <nav class="nav" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="list.html" aria-current="page">Каталог курсов</a></li>
+                    <li><a href="contact.html">Обратная связь</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Переключить тему">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <header class="page-header">
+                <h1>Каталог курсов</h1>
+                <p>Выберите курс для изучения из нашей коллекции</p>
+            </header>
+
+            <section class="filters">
+                <h2 class="visually-hidden">Фильтры курсов</h2>
+                <form class="filter-form">
+                    <div class="filter-group">
+                        <label for="level-filter">Уровень сложности:</label>
+                        <select id="level-filter" name="level">
+                            <option value="">Все уровни</option>
+                            <option value="beginner">Начальный</option>
+                            <option value="intermediate">Средний</option>
+                            <option value="advanced">Продвинутый</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="category-filter">Категория:</label>
+                        <select id="category-filter" name="category">
+                            <option value="">Все категории</option>
+                            <option value="programming">Программирование</option>
+                            <option value="design">Дизайн</option>
+                            <option value="marketing">Маркетинг</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Применить фильтры</button>
+                </form>
+            </section>
+
+            <section class="courses-list">
+                <h2 class="visually-hidden">Список курсов</h2>
+                <div class="courses-grid">
+                    <article class="course-card">
+                        <img src="img/course-1.jpg" alt="Студент работает за компьютером" class="course-image">
+                        <div class="course-content">
+                            <h3>HTML/CSS для начинающих</h3>
+                            <p>Освойте основы веб-разработки за 10 уроков. Изучите семантическую разметку и адаптивный дизайн.</p>
+                            <div class="course-meta">
+                                <div class="course-level">
+                                    <span class="level-badge level-beginner">Начальный</span>
+                                </div>
+                                <div class="course-duration">
+                                    <span>10 уроков</span>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="item.html" class="btn btn-primary">Начать курс</a>
+                                <button class="btn btn-icon" aria-label="Добавить в избранное">❤️</button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="course-card">
+                        <img src="img/course-2.jpg" alt="Программист пишет код" class="course-image">
+                        <div class="course-content">
+                            <h3>JavaScript основы</h3>
+                            <p>Изучите базовые концепции программирования на JavaScript. От переменных до функций и DOM.</p>
+                            <div class="course-meta">
+                                <div class="course-level">
+                                    <span class="level-badge level-intermediate">Средний</span>
+                                </div>
+                                <div class="course-duration">
+                                    <span>15 уроков</span>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="item.html" class="btn btn-primary">Начать курс</a>
+                                <button class="btn btn-icon" aria-label="Добавить в избранное">❤️</button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="course-card">
+                        <img src="img/course-3.jpg" alt="Дизайнер создает макет" class="course-image">
+                        <div class="course-content">
+                            <h3>UI/UX дизайн</h3>
+                            <p>Создавайте удобные и красивые интерфейсы. Принципы юзабилити и визуального дизайна.</p>
+                            <div class="course-meta">
+                                <div class="course-level">
+                                    <span class="level-badge level-advanced">Продвинутый</span>
+                                </div>
+                                <div class="course-duration">
+                                    <span>12 уроков</span>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="item.html" class="btn btn-primary">Начать курс</a>
+                                <button class="btn btn-icon" aria-label="Добавить в избранное">❤️</button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="course-card">
+                        <img src="img/course-1.jpg" alt="Студент изучает алгоритмы" class="course-image">
+                        <div class="course-content">
+                            <h3>Алгоритмы и структуры данных</h3>
+                            <p>Фундаментальные знания для каждого программиста. От сортировок до графов.</p>
+                            <div class="course-meta">
+                                <div class="course-level">
+                                    <span class="level-badge level-advanced">Продвинутый</span>
+                                </div>
+                                <div class="course-duration">
+                                    <span>20 уроков</span>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="item.html" class="btn btn-primary">Начать курс</a>
+                                <button class="btn btn-icon" aria-label="Добавить в избранное">❤️</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <nav class="pagination" aria-label="Навигация по страницам">
+                <ul>
+                    <li><a href="#" aria-current="page">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">Следующая</a></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Платформа «Сдам всё»</h3>
+                    <p>Образовательная платформа для быстрого освоения новых навыков</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="list.html">Каталог курсов</a></li>
+                        <li><a href="contact.html">Обратная связь</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <address>
+                        <p>Email: <a href="mailto:info@sdamvse.ru">info@sdamvse.ru</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Платформа мини-курсов «Сдам всё». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

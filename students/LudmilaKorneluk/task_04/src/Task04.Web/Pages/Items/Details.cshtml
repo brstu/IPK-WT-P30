@@ -1,0 +1,19 @@
+@page "{id:int}"
+@model Task04.Web.Pages.Items.DetailsModel
+@{
+    ViewData["Title"] = "Детали элемента";
+}
+
+<div class="container mt-5">
+    <h1>Детали элемента #@Model.ItemId</h1>
+    
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Элемент @Model.ItemId</h5>
+            <p class="card-text">Это детальная информация об элементе с идентификатором @Model.ItemId.</p>
+            <p><strong>Название:</strong> Элемент @Model.ItemId</p>
+            <p><strong>Описание:</strong> Подробное описание элемента @Model.ItemId</p>
+            <a href="/Items" class="btn btn-secondary">Назад к списку</a>
+        </div>
+    </div>
+</div>

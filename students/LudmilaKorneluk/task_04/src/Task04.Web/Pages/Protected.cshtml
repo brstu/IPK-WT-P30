@@ -1,0 +1,24 @@
+@page
+@model Task04.Web.Pages.ProtectedModel
+@{
+    ViewData["Title"] = "Защищенная страница";
+}
+
+<div class="container mt-5">
+    @if (Model.IsAuthenticated)
+    {
+        <div class="alert alert-success">
+            <h1>Защищенная страница</h1>
+            <p>Эта страница доступна только авторизованным пользователям.</p>
+            <p>Добро пожаловать, @Model.Username!</p>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            <h1>Доступ запрещен</h1>
+            <p>Для доступа к этой странице необходимо войти в систему.</p>
+            <a href="/Login" class="btn btn-primary">Войти</a>
+        </div>
+    }
+</div>

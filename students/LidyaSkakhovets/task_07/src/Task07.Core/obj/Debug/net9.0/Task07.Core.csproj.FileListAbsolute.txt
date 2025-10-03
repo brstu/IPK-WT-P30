@@ -1,0 +1,12 @@
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\bin\Debug\net9.0\Task07.Core.deps.json
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\bin\Debug\net9.0\Task07.Core.dll
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\bin\Debug\net9.0\Task07.Core.pdb
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\obj\Debug\net9.0\Task07.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\obj\Debug\net9.0\Task07.Core.AssemblyInfoInputs.cache
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\obj\Debug\net9.0\Task07.Core.AssemblyInfo.cs
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\obj\Debug\net9.0\Task07.Core.csproj.CoreCompileInputs.cache
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\obj\Debug\net9.0\Task07.Core.sourcelink.json
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\obj\Debug\net9.0\Task07.Core.dll
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\obj\Debug\net9.0\refint\Task07.Core.dll
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\obj\Debug\net9.0\Task07.Core.pdb
+C:\IPK-WT-P30\students\kateSaharok\task_07\src\Task07.Core\obj\Debug\net9.0\ref\Task07.Core.dll

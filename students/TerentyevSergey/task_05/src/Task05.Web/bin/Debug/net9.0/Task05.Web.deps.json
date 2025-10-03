@@ -1,0 +1,74 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Task05.Web/1.0.0": {
+        "dependencies": {
+          "Task05.Application": "1.0.0",
+          "Task05.Domain": "1.0.0",
+          "Task05.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "Task05.Web.dll": {}
+        }
+      },
+      "Task05.Application/1.0.0": {
+        "dependencies": {
+          "Task05.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Task05.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Task05.Domain/1.0.0": {
+        "runtime": {
+          "Task05.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Task05.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Task05.Application": "1.0.0",
+          "Task05.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Task05.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Task05.Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Task05.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Task05.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Task05.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

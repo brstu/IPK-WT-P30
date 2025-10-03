@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр рассылок «Не спам, а ценность» - Главная</title>
+    <meta name="description" content="Профессиональный сервис email-рассылок с высокой доставляемостью и удобным управлением кампаниями">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="Основная навигация">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <h1>«Не спам, а ценность»</h1>
+                </a>
+                <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" aria-current="page">Главная</a></li>
+                    <li><a href="campaigns.html">Кампании</a></li>
+                    <li><a href="analytics.html">Аналитика</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <h1 id="hero-title">Эффективные email-рассылки, которые читают</h1>
+                <p>Повышайте вовлеченность аудитории с помощью персонализированных рассылок</p>
+                <a href="campaigns.html" class="btn btn-primary">Создать кампанию</a>
+            </div>
+        </section>
+
+        <section class="services" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title">Наши преимущества</h2>
+                <div class="services-grid">
+                    <article class="service-card" role="article">
+                        <h3>Высокая доставляемость</h3>
+                        <p>98% писем доходят до inbox благодаря настройке SPF, DKIM и DMARC</p>
+                    </article>
+                    <article class="service-card" role="article">
+                        <h3>Умные сегменты</h3>
+                        <p>Персонализируйте контент на основе поведения пользователей</p>
+                    </article>
+                    <article class="service-card" role="article">
+                        <h3>Глубокая аналитика</h3>
+                        <p>Отслеживайте открытия, клики и конверсии в реальном времени</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="campaigns-preview" aria-labelledby="campaigns-title">
+            <div class="container">
+                <h2 id="campaigns-title">Активные кампании</h2>
+                <div class="campaigns-list">
+                    <!-- Карточки кампаний будут здесь -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Центр рассылок «Не спам, а ценность». Все права защищены.</p>
+            <address>
+                Контакты: <a href="mailto:info@nespam.ru">info@nespam.ru</a>
+            </address>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
